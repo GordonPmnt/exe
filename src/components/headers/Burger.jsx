@@ -1,9 +1,9 @@
 import React from 'react';
 import DehazeIcon from '@material-ui/icons/Dehaze';
 import styled from 'styled-components';
-import device from '../utils/device';
-import colors from '../utils/colors';
-import Link from './Link';
+import device from '../../utils/device';
+import colors from '../../utils/colors';
+import Link from '../buttons/Link';
 
 const Container = styled.div`
   display: initial;

@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from './Link';
-import device from '../utils/device';
-import colors from '../utils/colors';
+import Link from '../buttons/Link';
+import device from '../../utils/device';
+import colors from '../../utils/colors';
 
 const Nav = styled.nav`
     display: none;
