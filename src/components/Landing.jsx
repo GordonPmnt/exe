@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import colors from '../utils/colors';
 import device from '../utils/device';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
-import Burger from './Burger';
-import Navbar from './Navbar';
 
 const Hero = styled.section`
     width: 100vw;
@@ -75,26 +73,22 @@ const ViewWork = styled.button`
 
 const Landing = () => {
     return (
-        <>
-            <Burger />
-            <Navbar />
-            <Hero>
-                <Background
-                    playsInline
-                    autoPlay
-                    muted
-                    loop
-                >
-                    <source 
-                        src={require("../ressources/background.mov")}
-                        type="video/mp4"
-                    />
-                </Background>
-                <Pitch>Hello, I'm <Name>Gordon Preumont</Name>.</Pitch>
-                <Pitch>I'm a full-stack developer.</Pitch>
-                <ViewWork>{"View my work"}<ArrowDownwardIcon style={{ marginLeft: "10px" }} /></ViewWork>
-            </Hero>
-        </>
+        <Hero>
+            <Background
+                playsInline
+                autoPlay
+                muted
+                loop
+            >
+                <source 
+                    src={require("../ressources/background.mov")}
+                    type="video/mp4"
+                />
+            </Background>
+            <Pitch>Hello, I'm <Name>Gordon Preumont</Name>.</Pitch>
+            <Pitch>I'm a full-stack developer.</Pitch>
+            <ViewWork>{"View my work"}<ArrowDownwardIcon style={{ marginLeft: "10px" }} /></ViewWork>
+        </Hero>
     )
 }
 
