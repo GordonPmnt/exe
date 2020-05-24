@@ -3,7 +3,7 @@ import Landing from './components/Landing';
 import Burger from './components/headers/Burger';
 import Navbar from './components/headers/Navbar';
 
-function App() {
+const App = () => {
   return (
     <>
       <Burger />

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import DehazeIcon from '@material-ui/icons/Dehaze';
 import styled from 'styled-components';
 import device from '../../styles/device';
 import colors from '../../styles/colors';
+import { useOnClickOutside } from '../utils/hooks';
 import Link from '../buttons/Link';
 
 const Container = styled.div`
