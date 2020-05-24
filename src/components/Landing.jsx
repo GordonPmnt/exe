@@ -4,6 +4,7 @@ import colors from '../utils/colors';
 import device from '../utils/device';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import Burger from './Burger';
+import Navbar from './Navbar';
 
 const Hero = styled.section`
     width: 100vw;
@@ -72,6 +73,7 @@ const Landing = () => {
     return (
         <>
             <Burger />
+            <Navbar />
             <Hero>
                 <Background
                     playsInline
