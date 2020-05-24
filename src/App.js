@@ -1,10 +1,10 @@
 import React from 'react';
-import Welcome from './components/Welcome';
+import Landing from './components/Landing';
 
 function App() {
   return (
     <>
-      <Welcome />
+      <Landing />
     </>
   );
 }
