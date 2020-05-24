@@ -52,6 +52,7 @@ const ViewWork = styled.button`
     text-align: center;
     padding: 8px 20px;
     font-family: "Raleway", sans-serif;
+    color: #616161;
     transition: all 0.5s;
     cursor: pointer;
     display: flex;
@@ -73,7 +74,7 @@ const ViewWork = styled.button`
 
 const Landing = () => {
     return (
-        <Hero>
+        <Hero id="home">
             <Background
                 playsInline
                 autoPlay
