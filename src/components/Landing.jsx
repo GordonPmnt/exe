@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import colors from './styles/colors';
+import device from '../components/styles/device';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
 const Hero = styled.div`
     width: 100vw;
@@ -32,6 +34,10 @@ const Pitch = styled.h1`
     font-size: 1.4rem;
     text-align: center;
     margin: 0;
+
+    @media ${device.tablet} {
+        font-size: 3.1rem;
+    }
 `
 
 const Name = styled.span`
@@ -39,7 +45,26 @@ const Name = styled.span`
 `
 
 const ViewWork = styled.button`
-    margin-top: 15px;
+    margin-top: 20px;
+    border: 3px solid #fff;
+    background: transparent;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 8px 20px;
+    font-family: "Raleway", sans-serif;
+    transition: all 0.5s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    &:hover {
+        background-color: ${colors.turkoise};
+        border-color: ${colors.turkoise};
+        color: #fff;
+      }
+
+    @media ${device.tablet} {
+        font-size: 2rem;
+    }
 `
 
 const Landing = () => {
@@ -58,7 +83,7 @@ const Landing = () => {
             </Background>
             <Pitch>Hello, I'm <Name>Gordon Preumont</Name>.</Pitch>
             <Pitch>I'm a full-stack developer.</Pitch>
-            <ViewWork>View my work</ViewWork>
+            <ViewWork>{"View my work"}<ArrowDownwardIcon style={{ marginLeft: "10px" }} /></ViewWork>
         </Hero>
     )
 }
