@@ -34,25 +34,31 @@ const Button = styled.button`
 `
 
 const Menu = styled.div`
-  top: 42px;
   display: flex;
   flex-direction: column;
   background: ${colors.darkBlue};
   width: 100vw;
   position: absolute;
-  transition: transform 0.3s ease-in-out;
+  border-bottom: solid 3px ${colors.turkoise};
+  transform: ${({ open }) => open ? 'translateY(0)' : 'translateY(-100%)'};
+  transition: transform 0.3s ease-out;
 `
 
 const Burger = () => {
 
+  const [ open, setOpen ] = useState(false)
+  
+  const node = useRef(); 
+  useOnClickOutside(node, () => setOpen(false));
+
   return (
-    <Container>
+    <Container ref={node}>
       <Nav>
-        <Button>
+        <Button onClick={() => setOpen(!open)}>
           <DehazeIcon />
         </Button>
       </Nav>
-      <Menu>
+      <Menu open={open} onClick={() => setOpen(!open)}>
         <Link href="#home">HOME</Link>
         <Link href="#about">ABOUT</Link>
         <Link href="#portfolio">PORTFOLIO</Link>
