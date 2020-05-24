@@ -58,11 +58,15 @@ const ViewWork = styled.button`
     cursor: pointer;
     display: flex;
     align-items: center;
+
     &:hover {
         background-color: ${colors.turkoise};
         border-color: ${colors.turkoise};
         color: #fff;
-      }
+    }
+    &:focus {
+        outline: none;
+    }
 
     @media ${device.tablet} {
         font-size: 2rem;
