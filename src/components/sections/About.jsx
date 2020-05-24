@@ -1,5 +1,5 @@
 import React from 'react';
-import Section from './Section';
+import Section from '../subcomponents/Section';
 import styled from 'styled-components';
 import colors from '../../styles/colors';
 import device from '../../styles/device';
