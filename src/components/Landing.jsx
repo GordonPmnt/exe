@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import colors from './styles/colors';
-import device from '../components/styles/device';
+import colors from '../utils/colors';
+import device from '../utils/device';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
 const Hero = styled.div`
