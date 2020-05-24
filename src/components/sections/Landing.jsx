@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import colors from '../styles/colors';
-import device from '../styles/device';
+import colors from '../../styles/colors';
+import device from '../../styles/device';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
 const Hero = styled.section`
@@ -26,7 +26,7 @@ const Background = styled.video`
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: url(${require('../ressources/background.png')}) no-repeat;
+    background: url(${require('../../ressources/background.png')}) no-repeat;
     background-size: cover;
 `
 
@@ -81,7 +81,7 @@ const Landing = () => {
                 loop
             >
                 <source 
-                    src={require("../ressources/background.mov")}
+                    src={require("../../ressources/background.mov")}
                     type="video/mp4"
                 />
             </Background>
