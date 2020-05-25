@@ -1,5 +1,6 @@
 [{
     "name": "Programming",
+    "icon": "code.svg",
     "description": "I write clear, maintainable and consistent code.",
     "skills": [ 
         "JavaScript", 
@@ -19,6 +20,7 @@
     ]
 }, {
     "name": "Front-end",
+    "icon": "responsive.svg",
     "description": "I can create responsive, dynamic and intuitive applications.",
     "skills": [ 
         "React.js", 
@@ -36,6 +38,7 @@
     ]
 }, {
     "name": "Back-end",
+    "icon": "aptana.svg",
     "description": "I can build advanced applications using server, database & API.",
     "skills": [ 
         "Node.js", 
@@ -57,6 +60,7 @@
     ]
 }, {
     "name": "Business Background",
+    "icon": "accounting.svg",
     "description": "I can automate reports, management tools and fiancial calculation process.",
     "skills": [ 
         "Excel-VBA", 
@@ -72,6 +76,7 @@
     ]
 }, {
     "name": "Agile & Scrum management approach",
+    "icon": "scrum.svg",
     "description": "I know how to focus on delivering value in the shortest amount of time.",
     "skills": [ 
         "Agile-Scrum", 
