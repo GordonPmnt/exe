@@ -1,0 +1,88 @@
+[{
+    "name": "Programming",
+    "description": "I write clear, maintainable and consistent code.",
+    "skills": [ 
+        "JavaScript", 
+        "Python", 
+        "VBA", 
+        "Git", 
+        "Tests", 
+        "Visual Studio" 
+    ],
+    "svg": [ 
+        "js_badge.svg", 
+        "python.svg", 
+        "windows.svg", 
+        "git.svg", 
+        "git_pull_request.svg", 
+        "visualstudio.svg" 
+    ]
+}, {
+    "name": "Front-end",
+    "description": "I can create responsive, dynamic and intuitive applications.",
+    "skills": [ 
+        "React.js", 
+        "HTML", 
+        "CSS", 
+        "React Native", 
+        "Chrome Extensions" 
+    ],
+    "svg": [ 
+        "react.svg", 
+        "html5.svg", 
+        "css3.svg", 
+        "react.svg", 
+        "chrome.svg" 
+    ]
+}, {
+    "name": "Back-end",
+    "description": "I can build advanced applications using server, database & API.",
+    "skills": [ 
+        "Node.js", 
+        "Django", 
+        "SQL Databases", 
+        "REST", 
+        "GraphQl", 
+        "aws", 
+        "Unix" 
+    ],
+    "svg": [ 
+        "nodejs_small.svg", 
+        "django.svg", 
+        "database.svg", 
+        "code_badge.svg", 
+        "graphql.png", 
+        "aws.svg", 
+        "terminal.svg" 
+    ]
+}, {
+    "name": "Business Background",
+    "description": "I can automate reports, management tools and fiancial calculation process.",
+    "skills": [ 
+        "Excel-VBA", 
+        "queries SQL", 
+        "Business Control", 
+        "Accounting" 
+    ],
+    "svg": [ 
+        "windows.svg", 
+        "database.svg", 
+        "business.svg", 
+        "accounting.svg" 
+    ]
+}, {
+    "name": "Agile & Scrum management approach",
+    "description": "I know how to focus on delivering value in the shortest amount of time.",
+    "skills": [ 
+        "Agile-Scrum", 
+        "MVP", 
+        "Taiga/Trello", 
+        "Github" 
+    ],
+    "svg": [ 
+        "scrum.svg", 
+        "codepen.svg", 
+        "trello.svg", 
+        "github_badge.svg" 
+    ]
+}]
