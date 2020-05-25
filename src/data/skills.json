@@ -2,7 +2,7 @@
     "name": "Programming",
     "icon": "code.svg",
     "description": "I write clear, maintainable and consistent code.",
-    "skills": [ 
+    "subSkills": [ 
         "JavaScript", 
         "Python", 
         "VBA", 
@@ -22,7 +22,7 @@
     "name": "Front-end",
     "icon": "responsive.svg",
     "description": "I can create responsive, dynamic and intuitive UI.",
-    "skills": [ 
+    "subSkills": [ 
         "React.js", 
         "HTML", 
         "CSS", 
@@ -40,7 +40,7 @@
     "name": "Back-end",
     "icon": "server.svg",
     "description": "I can build advanced applications using server, database & API.",
-    "skills": [ 
+    "subSkills": [ 
         "Node.js", 
         "Django", 
         "SQL Databases", 
@@ -62,7 +62,7 @@
     "name": "Agile & Scrum",
     "icon": "scrum2.svg",
     "description": "I know how to focus on delivering value in the shortest amount of time.",
-    "skills": [ 
+    "subSkills": [ 
         "Agile-Scrum", 
         "MVP", 
         "Taiga/Trello", 
@@ -78,7 +78,7 @@
     "name": "Business-understanding",
     "icon": "graphic.svg",
     "description": "I can automate reports, management tools and fiancial calculation process.",
-    "skills": [ 
+    "subSkills": [ 
         "Excel-VBA", 
         "queries SQL", 
         "Business Control", 

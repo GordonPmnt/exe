@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import device from '../../styles/device';
 import colors from '../../styles/colors';
+import SubSkill from './SubSkill';
 
 const Container = styled.div`
     width: 150px;
@@ -10,6 +11,14 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     margin: 20px 0px 20px 0px;
+    cursor: pointer;
+
+    &:hover {
+        .jsEyyE {
+            transition: all 0.5s;
+            background: ${colors.pinkMexican};
+        }
+    }
 
     @media ${device.tablet} {
         width: 165px;
@@ -59,15 +68,30 @@ const Description = styled.p`
     }
 `
 
-const Skill = ({ name, icon, description, skills, svg }) => {
+const Skill = ({ name, icon, description, subSkills, svg }) => {
     const displayedIcon = require(`../../ressources/SVG/${icon}`)
+    const [switched, setSwitched] = useState(false);
+
     return (
-        <Container>
+        <Container onClick={() => setSwitched(!switched)}>
             <IconContainer>
                 <Icon src={displayedIcon} alt={name} />
             </IconContainer>
             <Name>{name}</Name>
-            <Description>{description}</Description>
+            {switched
+                ?   
+                    <ul>
+                        {subSkills.map((subSkill, index) => 
+                            <SubSkill 
+                                subSkill={subSkill}
+                                index={index}
+                                svg={svg} 
+                            />
+                        )}
+                    </ul>
+                :   
+                    <Description>{description}</Description>
+            }
         </Container>
     )
 }
