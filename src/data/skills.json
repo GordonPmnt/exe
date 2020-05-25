@@ -38,7 +38,7 @@
     ]
 }, {
     "name": "Back-end",
-    "icon": "aptana.svg",
+    "icon": "server.svg",
     "description": "I can build advanced applications using server, database & API.",
     "skills": [ 
         "Node.js", 
@@ -60,7 +60,7 @@
     ]
 }, {
     "name": "Business Background",
-    "icon": "accounting.svg",
+    "icon": "graphic.svg",
     "description": "I can automate reports, management tools and fiancial calculation process.",
     "skills": [ 
         "Excel-VBA", 
@@ -76,7 +76,7 @@
     ]
 }, {
     "name": "Agile & Scrum management approach",
-    "icon": "scrum.svg",
+    "icon": "scrum2.svg",
     "description": "I know how to focus on delivering value in the shortest amount of time.",
     "skills": [ 
         "Agile-Scrum", 

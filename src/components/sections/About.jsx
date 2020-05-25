@@ -1,9 +1,9 @@
 import React from 'react';
-import Section from '../styled/Section';
+import Section from '../styled-only/Section';
 import styled from 'styled-components';
 import colors from '../../styles/colors';
 import device from '../../styles/device';
-import Title from '../styled/Title';
+import Title from '../styled-only/Title';
 import Skill from '../sub-compo/Skill';
 
 const About = () => {
