@@ -4,7 +4,7 @@ import colors from '../../styles/colors';
 import device from '../../styles/device';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
-const Hero = styled.section`
+const Section = styled.section`
     width: 100vw;
     height: 100vh;
     align-items: center;
@@ -72,9 +72,9 @@ const ViewWork = styled.button`
     }
 `
 
-const Landing = () => {
+const Hero = () => {
     return (
-        <Hero id="home">
+        <Section id="home">
             <Background
                 playsInline
                 autoPlay
@@ -89,8 +89,8 @@ const Landing = () => {
             <Pitch>Hello, I'm <Name>Gordon Preumont</Name>.</Pitch>
             <Pitch>I'm a full-stack developer.</Pitch>
             <ViewWork>{"View my work"}<ArrowDownwardIcon style={{ marginLeft: "10px" }} /></ViewWork>
-        </Hero>
+        </Section>
     )
 }
 
-export default Landing;
+export default Hero;
