@@ -21,7 +21,7 @@
 }, {
     "name": "Front-end",
     "icon": "responsive.svg",
-    "description": "I can create responsive, dynamic and intuitive applications.",
+    "description": "I can create responsive, dynamic and intuitive UI.",
     "skills": [ 
         "React.js", 
         "HTML", 
@@ -59,23 +59,7 @@
         "terminal.svg" 
     ]
 }, {
-    "name": "Business Background",
-    "icon": "graphic.svg",
-    "description": "I can automate reports, management tools and fiancial calculation process.",
-    "skills": [ 
-        "Excel-VBA", 
-        "queries SQL", 
-        "Business Control", 
-        "Accounting" 
-    ],
-    "svg": [ 
-        "windows.svg", 
-        "database.svg", 
-        "business.svg", 
-        "accounting.svg" 
-    ]
-}, {
-    "name": "Agile & Scrum management approach",
+    "name": "Agile & Scrum",
     "icon": "scrum2.svg",
     "description": "I know how to focus on delivering value in the shortest amount of time.",
     "skills": [ 
@@ -89,5 +73,21 @@
         "codepen.svg", 
         "trello.svg", 
         "github_badge.svg" 
+    ]
+}, {
+    "name": "Business-understanding",
+    "icon": "graphic.svg",
+    "description": "I can automate reports, management tools and fiancial calculation process.",
+    "skills": [ 
+        "Excel-VBA", 
+        "queries SQL", 
+        "Business Control", 
+        "Accounting" 
+    ],
+    "svg": [ 
+        "windows.svg", 
+        "database.svg", 
+        "business.svg", 
+        "accounting.svg" 
     ]
 }]

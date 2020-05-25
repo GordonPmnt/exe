@@ -4,12 +4,12 @@ import device from '../../styles/device';
 import colors from '../../styles/colors';
 
 const Container = styled.div`
-    width: 130px;
-    margin: 10%;
+    width: 150px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 20px 0px 20px 0px;
 `
 
 const IconContainer = styled.div`
