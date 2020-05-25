@@ -1,9 +1,9 @@
 import React from 'react';
-import Section from '../subcomponents/Section';
+import Section from '../stylecomponents/Section';
 import styled from 'styled-components';
 import colors from '../../styles/colors';
 import device from '../../styles/device';
-import Title from '../subcomponents/Title';
+import Title from '../stylecomponents/Title';
 
 const About = () => {
     return (
