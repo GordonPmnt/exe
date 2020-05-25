@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import device from '../../styles/device';
 import colors from '../../styles/colors';
 import { useOnClickOutside } from '../utils/hooks';
-import Link from '../stylecomponents/Link';
+import Link from '../styled/Link';
 
 const Container = styled.div`
   display: initial;
