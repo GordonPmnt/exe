@@ -1,7 +1,7 @@
 import React from 'react';
 import Hero from './components/sections/Hero';
-import Burger from './components/head&foot/Burger';
-import Navbar from './components/head&foot/Navbar';
+import Burger from './components/sub-compo/Burger';
+import Navbar from './components/sub-compo/Navbar';
 import About from './components/sections/About';
 
 const App = () => {
