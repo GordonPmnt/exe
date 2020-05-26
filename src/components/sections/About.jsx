@@ -17,6 +17,7 @@ const Me = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 40px;
     margin: 40px 15%;
 
     @media ${device.tablet} {
@@ -71,7 +72,7 @@ const About = () => {
     const skills = require('../../data/skills.json')
     return (
         <Section id="about" background={colors.white}>
-            <Title>ABOUT</Title>
+            <Title title={"ABOUT"} />
             <Skills>
             {
                 skills.map(skill => <Skill key={skill.name} {...skill} />)
