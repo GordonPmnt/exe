@@ -14,7 +14,7 @@ const Container = styled.div`
     cursor: pointer;
 
     &:hover {
-        .jsEyyE {
+        .skill-set {
             transition: all 0.5s;
             background: ${colors.pinkMexican};
         }
@@ -68,19 +68,24 @@ const Description = styled.p`
     }
 `
 
+const List = styled.ul`
+    padding: 0;
+    margin: 0;
+`
+
 const Skill = ({ name, icon, description, subSkills, svg }) => {
     const displayedIcon = require(`../../ressources/SVG/${icon}`)
     const [switched, setSwitched] = useState(false);
 
     return (
         <Container onClick={() => setSwitched(!switched)}>
-            <IconContainer>
+            <IconContainer className="skill-set">
                 <Icon src={displayedIcon} alt={name} />
             </IconContainer>
             <Name>{name}</Name>
             {switched
                 ?   
-                    <ul>
+                    <List>
                         {subSkills.map((subSkill, index) => 
                             <SubSkill 
                                 subSkill={subSkill}
@@ -88,7 +93,7 @@ const Skill = ({ name, icon, description, subSkills, svg }) => {
                                 svg={svg} 
                             />
                         )}
-                    </ul>
+                    </List>
                 :   
                     <Description>{description}</Description>
             }
