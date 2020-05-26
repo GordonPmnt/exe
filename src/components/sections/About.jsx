@@ -5,6 +5,7 @@ import colors from '../../styles/colors';
 import Title from '../styled-only/Title';
 import Skill from '../sub-compo/Skill';
 import Link from '../styled-only/Link';
+import device from '../../styles/device';
 
 const Skills = styled.div`
     display: flex;
@@ -16,17 +17,24 @@ const Me = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 30px 15%;
+    margin: 40px 15%;
+
+    @media ${device.tablet} {
+        flex-direction: row;
+    }
 `
 
 const Avatar = styled.img`
     width: 200px;
-    border-radius: 50%;
+    border-radius: 100%;
     border: solid 5px ${colors.turkoise};
     opacity: 0.9;
-    background: #ffffff;
-    box-shadow: inset 16px 16px 32px #d1d1d1, inset -16px -16px 32px #ffffff;
     margin-bottom: 25px;
+
+    @media ${device.tablet} {
+        width: 300px;
+        margin-right: 100px;
+    }
 `
 
 const Bio = styled.div`
@@ -37,10 +45,18 @@ const BioHeader = styled.div`
     font-weight: bold;
     font-size: 1rem;
     margin-bottom: 15px;
+
+    @media ${device.tablet} {
+        font-size: 1.5rem
+    }
 `
 
 const BioText = styled.div`
     font-size: 0.8rem;
+
+    @media ${device.tablet} {
+        font-size: 1.1rem
+    }
 `
 
 const Contact = styled(Link)`
@@ -70,7 +86,7 @@ const About = () => {
                         I worked 10 years in finance in various positions and areas.
                         <Break />
                         Passionate about programming and technologies, I decided to 
-                        change careers to become a Full Stack Developer to better 
+                        change careers to become a <b>Full-Stack Developer</b> to better 
                         meet my values and live from my passion. 
                         <Break />
                         Today I am fulfilled and more motivated than ever. 
