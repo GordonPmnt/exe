@@ -26,13 +26,15 @@
         "React.js", 
         "HTML", 
         "CSS", 
+        "Bootstrap",
         "React Native", 
-        "Chrome Extensions" 
+        "Chrome Ext." 
     ],
     "svg": [ 
         "react.svg", 
         "html5.svg", 
         "css3.svg", 
+        "bootstrap.svg",
         "react.svg", 
         "chrome.svg" 
     ]
@@ -75,19 +77,19 @@
         "github_badge.svg" 
     ]
 }, {
-    "name": "Business-understanding",
+    "name": "Business-background",
     "icon": "graphic.svg",
     "description": "I can automate reports, management tools and fiancial calculation process.",
     "subSkills": [ 
-        "Excel-VBA", 
-        "queries SQL", 
         "Business Control", 
-        "Accounting" 
+        "Accounting",
+        "Excel-VBA", 
+        "queries SQL"
     ],
     "svg": [ 
-        "windows.svg", 
-        "database.svg", 
         "business.svg", 
-        "accounting.svg" 
+        "accounting.svg", 
+        "windows.svg", 
+        "database.svg"
     ]
 }]
