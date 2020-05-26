@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import device from '../../styles/device';
-import colors from '../../styles/colors';
 
 const Topic = styled.li`
     list-style: none;

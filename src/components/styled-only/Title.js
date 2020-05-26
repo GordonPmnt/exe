@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import React from 'react';
-import colors from '../../styles/colors';
 import device from '../../styles/device';
 
 const Title = styled.h3`
