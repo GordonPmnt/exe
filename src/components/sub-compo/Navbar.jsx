@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from '../sub-compo/Link';
+import Link from './Link';
 import device from '../../styles/device';
 import colors from '../../styles/colors';
 

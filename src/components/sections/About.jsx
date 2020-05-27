@@ -12,6 +12,10 @@ const Skills = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    
+    @media ${device.tablet} {
+        min-height: 350px;
+    }
 `
 
 const Me = styled.div`
@@ -82,6 +86,7 @@ const SubTitle = styled.h4`
 const Show = styled(Button)`
     font-size: 1rem;
     border-radius: 8px;
+    cursor: pointer;
     background-color: ${({ switched }) => switched ? colors.pinkMexican : colors.turkoise};
 
     @media ${device.tablet} {

@@ -44,9 +44,10 @@ const Name = styled.span`
     color: ${colors.pinkMexican};
 `
 
-const ViewWork = styled.button`
+const ViewWork = styled.a`
     margin-top: 20px;
     border: 3px solid #fff;
+    text-decoration: none;
     background: transparent;
     font-size: 1.4rem;
     text-align: center;
@@ -88,7 +89,7 @@ const Hero = () => {
             </Background>
             <Pitch>Hello, I'm <Name>Gordon Preumont</Name>.</Pitch>
             <Pitch>I'm a full-stack developer.</Pitch>
-            <ViewWork>{"View my work"}<ArrowDownwardIcon style={{ marginLeft: "10px" }} /></ViewWork>
+            <ViewWork href="#about">{"View my work"}<ArrowDownwardIcon style={{ marginLeft: "10px" }} /></ViewWork>
         </Section>
     )
 }
