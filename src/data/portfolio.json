@@ -1,0 +1,46 @@
+[{
+    "id": 1,
+    "name": "Project 1",
+    "client": "Prototype/portfolio",
+    "github": "www.githublink.com",
+    "mainStacks": [ "JavaScript", "Python", "React.js" ],
+    "stackIcons": [ "js_badge.svg", "python.svg", "react.svg" ],
+    "picture": "project.jpg",
+    "description": "This project is the best project ever and ever forever and ever. We used so many awesome yechnologies, the project manager was so good and everybody was happy. Love, peace..."
+}, {
+    "id": 2,
+    "name": "Project 2",
+    "client": "This app is used by a property management company",
+    "github": "Private repository",
+    "mainStacks": [ "JavaScript", "Python", "React.js" ],
+    "stackIcons": [ "js_badge.svg", "python.svg", "react.svg" ],
+    "picture": "project.jpg",
+    "description": "This project is the best project ever and ever forever and ever. We used so many awesome yechnologies, the project manager was so good and everybody was happy. Love, peace..."
+}, {
+    "id": 3,
+    "name": "Project 3",
+    "client": "This app is used by a property management company",
+    "github": "Private repository",
+    "mainStacks": [ "JavaScript", "Python", "React.js" ],
+    "stackIcons": [ "js_badge.svg", "python.svg", "react.svg" ],
+    "picture": "project.jpg",
+    "description": "This project is the best project ever and ever forever and ever. We used so many awesome yechnologies, the project manager was so good and everybody was happy. Love, peace..."
+}, {
+    "id": 4,
+    "name": "Project 4",
+    "client": "This app is used by a property management company",
+    "github": "Private repository",
+    "mainStacks": [ "JavaScript", "Python", "React.js" ],
+    "stackIcons": [ "js_badge.svg", "python.svg", "react.svg" ],
+    "picture": "project.jpg",
+    "description": "This project is the best project ever and ever forever and ever. We used so many awesome yechnologies, the project manager was so good and everybody was happy. Love, peace..."
+}, {
+    "id": 5,
+    "name": "Project 5",
+    "client": "This app is used by a property management company",
+    "github": "Private repository",
+    "mainStacks": [ "JavaScript", "Python", "React.js" ],
+    "stackIcons": [ "js_badge.svg", "python.svg", "react.svg" ],
+    "picture": "project.jpg",
+    "description": "This project is the best project ever and ever forever and ever. We used so many awesome yechnologies, the project manager was so good and everybody was happy. Love, peace..."
+}]

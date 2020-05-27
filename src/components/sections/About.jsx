@@ -120,7 +120,7 @@ const About = () => {
             </SubTitle>
             <Skills>
             {
-                skills.map(skill => <Skill key={skill.name} {...skill} switched={switched} />)
+                skills.map(skill => <Skill key={skill.id} {...skill} switched={switched} />)
             }
             </Skills>
             <Me>
