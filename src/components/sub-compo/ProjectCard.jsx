@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import colors from '../../styles/colors';
 import device from '../../styles/device';
+import SubSkill from './SubSkill';
 
 const Card = styled.div`
     height: 240px;
@@ -18,10 +19,23 @@ const Card = styled.div`
     }
 `
 
-const ProjectCard = ({ id, name, client, github, mainStacks, stackIcons, picture, description }) => {
+const Header = styled.h3`
+`
+
+const LinkProject = styled.a`
+`
+
+const Skill = styled(SubSkill)`
+`
+
+const ProjectCard = ({ id, name, mainStacks, stackIcons, picture }) => {
     return (
         <Card picture={picture}>
-            PROJECT
+            <Header>{name}</Header>
+            {
+                mainStacks.map((subSkill, index) => <Skill subSkill={subSkill} index={index} svg={stackIcons} />)
+            }
+            <LinkProject>LEARN MORE</LinkProject>
         </Card>
     )
 }
