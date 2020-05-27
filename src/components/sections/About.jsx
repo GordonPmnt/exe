@@ -22,11 +22,11 @@ const Me = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 40px;
-    margin: 40px 10%;
+    padding-bottom: 50px;
+    margin: 0 10%;
 
     @media ${device.laptop} {
-        margin: 40px 20%;
+        margin: 0 20%;
         flex-direction: row;
     }
 `
