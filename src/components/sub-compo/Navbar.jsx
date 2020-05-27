@@ -8,6 +8,7 @@ const Nav = styled.nav`
     display: none;
 
     @media ${device.tablet} {
+        z-index: 100;
         background: ${colors.darkBlue};
         display: initial;
         position: fixed;

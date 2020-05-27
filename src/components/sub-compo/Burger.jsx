@@ -8,6 +8,7 @@ import Link from '../sub-compo/Link';
 
 const Container = styled.div`
   display: initial;
+  z-index: 100;
 
   @media ${device.tablet} {
     display: none;
@@ -20,6 +21,7 @@ const Nav = styled.nav`
   padding: 5px 10px;
   background: ${colors.darkBlue};
   width: 100%;
+  z-index: 100;
 `
 
 const Button = styled.button`
