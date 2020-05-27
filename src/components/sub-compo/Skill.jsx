@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import device from '../../styles/device';
 import colors from '../../styles/colors';
@@ -11,14 +11,6 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     margin: 20px 0px 20px 0px;
-    cursor: pointer;
-
-    &:hover {
-        .skill-set {
-            transition: all 0.5s;
-            background: ${colors.pinkMexican};
-        }
-    }
 
     @media ${device.tablet} {
         width: 165px;
@@ -73,13 +65,12 @@ const List = styled.ul`
     margin: 0;
 `
 
-const Skill = ({ name, icon, description, subSkills, svg }) => {
+const Skill = ({ name, icon, description, subSkills, svg, switched }) => {
     const displayedIcon = require(`../../ressources/SVG/${icon}`)
-    const [switched, setSwitched] = useState(false);
 
     return (
-        <Container onClick={() => setSwitched(!switched)}>
-            <IconContainer className="skill-set">
+        <Container>
+            <IconContainer>
                 <Icon src={displayedIcon} alt={name} />
             </IconContainer>
             <Name>{name}</Name>

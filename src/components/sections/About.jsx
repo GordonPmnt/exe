@@ -1,11 +1,12 @@
-import React from 'react';
-import Section from '../styled-only/Section';
+import React, { useState } from 'react';
+import Section from '../sub-compo/Section';
 import styled from 'styled-components';
 import colors from '../../styles/colors';
-import Title from '../styled-only/Title';
+import Title from '../sub-compo/Title';
 import Skill from '../sub-compo/Skill';
-import Link from '../styled-only/Link';
+import Link from '../sub-compo/Link';
 import device from '../../styles/device';
+import Button from '../sub-compo/Button';
 
 const Skills = styled.div`
     display: flex;
@@ -48,7 +49,7 @@ const BioHeader = styled.div`
     margin-bottom: 15px;
 
     @media ${device.tablet} {
-        font-size: 1.5rem
+        font-size: 1.5rem;
     }
 `
 
@@ -56,12 +57,35 @@ const BioText = styled.div`
     font-size: 0.8rem;
 
     @media ${device.tablet} {
-        font-size: 1.1rem
+        font-size: 1.1rem;
     }
 `
 
 const Contact = styled(Link)`
     color: ${colors.turkoise};
+`
+
+const SubTitle = styled.h4`
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media ${device.tablet} {
+        font-size: 1.5rem;
+    }
+`
+
+const Show = styled(Button)`
+    font-size: 1rem;
+    border-radius: 8px;
+
+    @media ${device.tablet} {
+        font-size: 1.5rem;
+    }
 `
 
 const Break = styled.div`
@@ -70,12 +94,15 @@ const Break = styled.div`
 
 const About = () => {
     const skills = require('../../data/skills.json')
+    const [switched, setSwitched] = useState(false);
+
     return (
         <Section id="about" background={colors.white}>
             <Title title={"ABOUT"} />
+            <SubTitle>⤜ Technical skills<Show onClick={() => setSwitched(!switched)}>Show</Show> ⤛</SubTitle>
             <Skills>
             {
-                skills.map(skill => <Skill key={skill.name} {...skill} />)
+                skills.map(skill => <Skill key={skill.name} {...skill} switched={switched} />)
             }
             </Skills>
             <Me>

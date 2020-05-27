@@ -27,7 +27,7 @@ const Title = ({ title }) => {
     return (
         <>
             <TitleText>{title}</TitleText>
-            <TitleRow> 〧 </TitleRow>
+            <TitleRow> ▔▔ </TitleRow>
         </>
     )
 }
