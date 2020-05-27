@@ -12,7 +12,7 @@ const Container = styled.div`
     align-items: center;
     margin: 20px 0px 20px 0px;
 
-    @media ${device.tablet} {
+    @media ${device.laptop} {
         width: 165px;
     }
 `
@@ -25,7 +25,7 @@ const IconContainer = styled.div`
     justify-content: center;
     border-radius: 100%;
 
-    @media ${device.tablet} {
+    @media ${device.laptop} {
         height: 80px;
         width: 80px;
     }
@@ -36,7 +36,7 @@ const Icon = styled.img`
     -webkit-filter: invert(1);
     filter: invert(1);
 
-    @media ${device.tablet} {
+    @media ${device.laptop} {
         width: 40px;
     }
 `
@@ -46,7 +46,7 @@ const Name = styled.p`
     font-weight: bold;
     margin: 5;
 
-    @media ${device.tablet} {
+    @media ${device.laptop} {
         font-size: 1.3rem;
     }
 `
@@ -55,7 +55,7 @@ const Description = styled.p`
     font-size: 0.8rem;
     margin: 0;
 
-    @media ${device.tablet} {
+    @media ${device.laptop} {
         font-size: 1rem;
     }
 `

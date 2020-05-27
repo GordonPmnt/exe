@@ -11,7 +11,7 @@ const Icon = styled.img`
     width: 15px;
     margin-right: 10px;
 
-    @media ${device.tablet} {
+    @media ${device.laptop} {
         width: 20px;
     }
 `
@@ -21,7 +21,7 @@ const Name = styled.p`
     margin: 0;
     text-align: left;
 
-    @media ${device.tablet} {
+    @media ${device.laptop} {
         font-size: 1rem;
     }
 `

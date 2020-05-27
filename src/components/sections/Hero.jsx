@@ -35,7 +35,7 @@ const Pitch = styled.h1`
     text-align: center;
     margin: 0;
 
-    @media ${device.tablet} {
+    @media ${device.laptop} {
         font-size: 3.1rem;
     }
 `
@@ -68,7 +68,7 @@ const ViewWork = styled.a`
         outline: none;
     }
 
-    @media ${device.tablet} {
+    @media ${device.laptop} {
         font-size: 2rem;
     }
 `

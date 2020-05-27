@@ -13,7 +13,7 @@ const Skills = styled.div`
     flex-wrap: wrap;
     justify-content: space-evenly;
     
-    @media ${device.tablet} {
+    @media ${device.laptop} {
         min-height: 350px;
     }
 `
@@ -23,9 +23,10 @@ const Me = styled.div`
     flex-direction: column;
     align-items: center;
     padding-bottom: 40px;
-    margin: 40px 15%;
+    margin: 40px 10%;
 
-    @media ${device.tablet} {
+    @media ${device.laptop} {
+        margin: 40px 20%;
         flex-direction: row;
     }
 `
@@ -37,14 +38,15 @@ const Avatar = styled.img`
     opacity: 0.9;
     margin-bottom: 25px;
 
-    @media ${device.tablet} {
-        width: 300px;
+    @media ${device.laptop} {
+        width: 280px;
         margin-right: 100px;
     }
 `
 
 const Bio = styled.div`
     text-align: center;
+    max-width: 700px;
 `
 
 const BioHeader = styled.div`
@@ -52,7 +54,7 @@ const BioHeader = styled.div`
     font-size: 1rem;
     margin-bottom: 15px;
 
-    @media ${device.tablet} {
+    @media ${device.laptop} {
         font-size: 1.5rem;
     }
 `
@@ -60,7 +62,7 @@ const BioHeader = styled.div`
 const BioText = styled.div`
     font-size: 0.8rem;
 
-    @media ${device.tablet} {
+    @media ${device.laptop} {
         font-size: 1.1rem;
     }
 `
@@ -78,7 +80,7 @@ const SubTitle = styled.h4`
     margin-left: auto;
     margin-right: auto;
 
-    @media ${device.tablet} {
+    @media ${device.laptop} {
         font-size: 1.5rem;
     }
 `
@@ -89,7 +91,7 @@ const Show = styled(Button)`
     cursor: pointer;
     background-color: ${({ switched }) => switched ? colors.pinkMexican : colors.turkoise};
 
-    @media ${device.tablet} {
+    @media ${device.laptop} {
         font-size: 1.5rem;
     }
 

@@ -8,7 +8,7 @@ const TitleText = styled.h3`
     margin: 0;
     padding-top: 50px;
 
-    @media ${device.tablet} {
+    @media ${device.laptop} {
         font-size: 2.5rem;
     }
 `
@@ -18,7 +18,7 @@ const TitleRow = styled.h3`
     font-size: 1.8rem;
     margin: 0 0 50px 0;
 
-    @media ${device.tablet} {
+    @media ${device.laptop} {
         font-size: 2.3rem;
     }
 `

@@ -1,4 +1,5 @@
 [{
+    "id": 1,
     "name": "Programming",
     "icon": "code.svg",
     "description": "I write clear, maintainable and consistent code.",
@@ -19,6 +20,7 @@
         "visualstudio.svg" 
     ]
 }, {
+    "id": 2,
     "name": "Front-end",
     "icon": "responsive.svg",
     "description": "I can create responsive, dynamic and intuitive UI.",
@@ -39,6 +41,7 @@
         "chrome.svg" 
     ]
 }, {
+    "id": 3,
     "name": "Back-end",
     "icon": "server.svg",
     "description": "I can build advanced applications using server, database & API.",
@@ -61,6 +64,7 @@
         "terminal.svg" 
     ]
 }, {
+    "id": 4,
     "name": "Project management",
     "icon": "scrum2.svg",
     "description": "I know how to focus on delivering value in the shortest amount of time.",
@@ -77,6 +81,7 @@
         "github_badge.svg" 
     ]
 }, {
+    "id": 5,
     "name": "Business-background",
     "icon": "graphic.svg",
     "description": "I can automate reports, management tools and fiancial calculation process.",
