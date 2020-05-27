@@ -25,6 +25,15 @@ const Card = styled.div`
 
 const Header = styled.h3`
     text-align: center;
+    font-size: 1.5rem;
+`
+
+const List = styled.ul`
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 `
 
 const LinkProject = styled.a`
@@ -39,7 +48,7 @@ const LinkProject = styled.a`
     transition: all 0.5s;
     cursor: pointer;
     position: relative;
-    top: 100px;
+    top: 60px;
     left: 50%;
     margin-left: -90px;
 
@@ -51,9 +60,17 @@ const LinkProject = styled.a`
     &:focus {
         outline: none;
     }
+
+    @media ${device.mobileL} {
+        top: 90px;
+    }
 `
 
-const Skill = styled(SubSkill)`
+const SkillContainer = styled.div`
+    border: 1px solid ${colors.grey};
+    border-radius: 20px;
+    padding: 4px 15px;
+    margin: 5px;
 `
 
 const ProjectCard = ({ id, name, mainStacks, stackIcons, picture }) => {
@@ -65,13 +82,24 @@ const ProjectCard = ({ id, name, mainStacks, stackIcons, picture }) => {
             onMouseEnter={() => setChecked(true)} 
             onMouseLeave={() => setChecked(false)}
         >
-            <Collapse in={checked} timeout={700} direction="up">
+            <Collapse in={checked} timeout={700}>
                 <Header>{name}</Header>
+                <List>
                 {
-                    mainStacks.map((subSkill, index) => <Skill key={id} subSkill={subSkill} index={index} svg={stackIcons} />)
+                    mainStacks.map((subSkill, index) =>
+                        <SkillContainer key={id}>
+                            <SubSkill 
+                                key={id} 
+                                subSkill={subSkill} 
+                                index={index} 
+                                svg={stackIcons} 
+                            />
+                        </SkillContainer>
+                    )
                 }
+                </List>
             </Collapse>
-            <Collapse in={checked} timeout={200} direction="up">
+            <Collapse in={checked} timeout={200}>
                 <LinkProject>LEARN MORE</LinkProject>
             </Collapse>
         </Card>
