@@ -3,6 +3,7 @@ import Hero from './components/sections/Hero';
 import Burger from './components/sub-compo/Burger';
 import Navbar from './components/sub-compo/Navbar';
 import About from './components/sections/About';
+import Portfolio from './components/sections/Portfolio';
 
 const App = () => {
   return (
@@ -10,9 +11,11 @@ const App = () => {
       <Burger />
       <Navbar />
 
-      {/* Writte routes as from here */}
       <Hero />
       <About />
+
+      {/* Writte routes as from here */}
+      <Portfolio />
     </>
   );
 }
