@@ -82,9 +82,14 @@ const SubTitle = styled.h4`
 const Show = styled(Button)`
     font-size: 1rem;
     border-radius: 8px;
+    background-color: ${({ switched }) => switched ? colors.pinkMexican : colors.turkoise};
 
     @media ${device.tablet} {
         font-size: 1.5rem;
+    }
+
+    &:focus {
+        background-color: ${({ switched }) => switched ? colors.pinkMexican : colors.turkoise};
     }
 `
 
@@ -99,7 +104,13 @@ const About = () => {
     return (
         <Section id="about" background={colors.white}>
             <Title title={"ABOUT"} />
-            <SubTitle>⤜ Technical skills<Show onClick={() => setSwitched(!switched)}>Show</Show> ⤛</SubTitle>
+            <SubTitle>
+                ⤜ Technical skills
+                <Show onClick={() => setSwitched(!switched)} switched={switched}>
+                    {switched ? "⇤ describe skills" : "show skills ⇥"}
+                </Show> 
+                ⤛
+            </SubTitle>
             <Skills>
             {
                 skills.map(skill => <Skill key={skill.name} {...skill} switched={switched} />)

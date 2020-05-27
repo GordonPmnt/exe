@@ -71,7 +71,7 @@ const Skill = ({ name, icon, description, subSkills, svg, switched }) => {
     return (
         <Container>
             <IconContainer>
-                <Icon src={displayedIcon} alt={name} />
+                <Icon src={displayedIcon} alt={name}/>
             </IconContainer>
             <Name>{name}</Name>
             {switched
