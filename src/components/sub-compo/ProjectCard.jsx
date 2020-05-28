@@ -9,7 +9,7 @@ const Card = styled.div`
     height: 240px;
     width: 100vw;
     margin: 0;
-    background-image: url(${({ picture }) => require('../../ressources/' + picture)});
+    background-image: url(${({ picture }) => require('../../ressources/portfolio/' + picture)});
     background-repeat:no-repeat;
     background-size: cover;
 
@@ -90,8 +90,10 @@ const ProjectCard = ({ id, name, mainStacks, stackIcons, picture }) => {
             onMouseEnter={() => setChecked(true)} 
             onMouseLeave={() => setChecked(false)}
         >
-            <Collapse in={checked} timeout={900}>
+            <Collapse in={checked} timeout={700}>
                 <Header>{name} <br /> ▔ </Header>
+            </Collapse>
+            <Collapse in={checked} timeout={500}>
                 <List>
                 {
                     mainStacks.map((subSkill, index) =>

@@ -1,12 +1,12 @@
 [{
     "id": 1,
-    "name": "Project 1",
-    "client": "Prototype/portfolio",
-    "github": "www.githublink.com",
-    "mainStacks": [ "JavaScript", "Python", "React.js" ],
-    "stackIcons": [ "js_badge.svg", "python.svg", "react.svg" ],
-    "picture": "project.jpg",
-    "description": "This project is the best project ever and ever forever and ever. We used so many awesome yechnologies, the project manager was so good and everybody was happy. Love, peace..."
+    "name": "Hermes",
+    "client": "Wild Code School",
+    "github": "https://github.com/GordonPmnt/hermes",
+    "mainStacks": [ "JavaScript", "Chrome dev." ],
+    "stackIcons": [ "js_badge.svg", "chrome.svg" ],
+    "picture": "hermes.png",
+    "description": ""
 }, {
     "id": 2,
     "name": "Project 2",
