@@ -8,7 +8,6 @@ import SubSkill from './SubSkill';
 const Card = styled.div`
     height: 240px;
     width: 100vw;
-    background-color: #fff;
     margin: 0;
     background-image: url(${({ picture }) => require('../../ressources/' + picture)});
     background-repeat:no-repeat;
@@ -20,7 +19,7 @@ const Card = styled.div`
     }
 
     &:hover {
-        background-image: none;
+        background-image: linear-gradient(white, transparent);
 `
 
 const Header = styled.h3`
@@ -48,7 +47,7 @@ const LinkProject = styled.a`
     transition: all 0.5s;
     cursor: pointer;
     position: relative;
-    top: 60px;
+    top: 40px;
     left: 50%;
     margin-left: -90px;
 
@@ -62,15 +61,24 @@ const LinkProject = styled.a`
     }
 
     @media ${device.mobileL} {
-        top: 90px;
+        top: 70px;
     }
 `
 
 const SkillContainer = styled.div`
     border: 1px solid ${colors.grey};
     border-radius: 20px;
-    padding: 4px 15px;
+    padding: 4px 14px;
     margin: 5px;
+
+    li, p {
+        font-size: 0.8rem;
+    }
+
+    img {
+        width: 15px;
+        margin-right: 5px;
+    }
 `
 
 const ProjectCard = ({ id, name, mainStacks, stackIcons, picture }) => {
@@ -82,8 +90,8 @@ const ProjectCard = ({ id, name, mainStacks, stackIcons, picture }) => {
             onMouseEnter={() => setChecked(true)} 
             onMouseLeave={() => setChecked(false)}
         >
-            <Collapse in={checked} timeout={700}>
-                <Header>{name}</Header>
+            <Collapse in={checked} timeout={900}>
+                <Header>{name} <br /> ▔ </Header>
                 <List>
                 {
                     mainStacks.map((subSkill, index) =>
@@ -99,7 +107,7 @@ const ProjectCard = ({ id, name, mainStacks, stackIcons, picture }) => {
                 }
                 </List>
             </Collapse>
-            <Collapse in={checked} timeout={200}>
+            <Collapse in={checked} timeout={400}>
                 <LinkProject>LEARN MORE</LinkProject>
             </Collapse>
         </Card>
