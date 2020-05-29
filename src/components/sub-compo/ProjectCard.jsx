@@ -66,14 +66,8 @@ const LinkProject = styled.a`
 `
 
 const SkillContainer = styled.div`
-    border: 1px solid ${colors.grey};
-    border-radius: 20px;
-    padding: 4px 14px;
     margin: 5px;
-
-    li, p {
-        font-size: 0.8rem;
-    }
+    color: ${colors.pinkMexican};
 
     img {
         width: 15px;
@@ -93,7 +87,7 @@ const ProjectCard = ({ id, name, mainStacks, stackIcons, picture }) => {
             <Collapse in={checked} timeout={700}>
                 <Header>{name} <br /> ▔ </Header>
             </Collapse>
-            <Collapse in={checked} timeout={500}>
+            <Collapse in={checked} timeout={700}>
                 <List>
                 {
                     mainStacks.map((subSkill, index) =>
