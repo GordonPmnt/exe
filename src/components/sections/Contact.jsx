@@ -8,3 +8,12 @@ import Link from '../sub-compo/Link';
 import device from '../../styles/device';
 import Button from '../sub-compo/Button';
 
+const Contact = () => {
+    return (
+        <Section background={colors.darkBlue}>
+            <Title title="CONTACT" color={colors.darkerWhite}/>
+        </Section>
+    )
+}
+
+export default Contact;
