@@ -70,7 +70,7 @@ const SkillContainer = styled.div`
     color: ${colors.pinkMexican};
 
     img {
-        width: 15px;
+        width: 20px;
         margin-right: 5px;
     }
 `

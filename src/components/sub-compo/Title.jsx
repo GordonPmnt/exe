@@ -7,6 +7,7 @@ const TitleText = styled.h3`
     font-size: 2rem;
     margin: 0;
     padding-top: 50px;
+    ${({ color }) => color ? 'color: ' + color + ';' : '' }
 
     @media ${device.laptop} {
         font-size: 2.5rem;
@@ -17,17 +18,18 @@ const TitleRow = styled.h3`
     text-align: center;
     font-size: 1.8rem;
     margin: 0 0 50px 0;
+    ${({ color }) => color ? 'color: ' + color + ';' : '' }
 
     @media ${device.laptop} {
         font-size: 2.3rem;
     }
 `
 
-const Title = ({ title }) => {
+const Title = ({ title, color }) => {
     return (
         <>
-            <TitleText>{title}</TitleText>
-            <TitleRow> ▔▔ </TitleRow>
+            <TitleText color={color}>{title}</TitleText>
+            <TitleRow color={color}> ▔▔ </TitleRow>
         </>
     )
 }
