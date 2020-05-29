@@ -61,4 +61,13 @@
     "stackIcons": [ "js_badge.svg", "react.svg", "nodejs_small.svg", "database.svg" ],
     "picture": "beangels.png",
     "description": ""
+}, {
+    "id": 8,
+    "name": "Covid Solidarity",
+    "client": "Covid Solidarity",
+    "github": "Private repository",
+    "mainStacks": [ "JavaScript", "React.js", "Node.js", "SQL" ],
+    "stackIcons": [ "js_badge.svg", "react.svg", "nodejs_small.svg", "database.svg" ],
+    "picture": "team.png",
+    "description": ""
 }]
