@@ -10,6 +10,7 @@ const Gallery = styled.div`
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    padding-bottom: 10%;
 
     @media ${device.mobileL} {
         margin: 0 15%;
