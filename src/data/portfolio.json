@@ -9,38 +9,56 @@
     "description": ""
 }, {
     "id": 2,
-    "name": "Project 2",
-    "client": "This app is used by a property management company",
-    "github": "Private repository",
-    "mainStacks": [ "JavaScript", "Python", "React.js" ],
-    "stackIcons": [ "js_badge.svg", "python.svg", "react.svg" ],
-    "picture": "project.jpg",
-    "description": "This project is the best project ever and ever forever and ever. We used so many awesome yechnologies, the project manager was so good and everybody was happy. Love, peace..."
+    "name": "Lazy Postcard",
+    "client": "Hackathon",
+    "github": "https://github.com/GordonPmnt/wild-hackathon",
+    "mainStacks": [ "JavaScript", "React.js" ],
+    "stackIcons": [ "js_badge.svg", "react.svg" ],
+    "picture": "lazy.png",
+    "description": ""
 }, {
     "id": 3,
-    "name": "Project 3",
-    "client": "This app is used by a property management company",
-    "github": "Private repository",
-    "mainStacks": [ "JavaScript", "Python", "React.js" ],
-    "stackIcons": [ "js_badge.svg", "python.svg", "react.svg" ],
-    "picture": "project.jpg",
-    "description": "This project is the best project ever and ever forever and ever. We used so many awesome yechnologies, the project manager was so good and everybody was happy. Love, peace..."
+    "name": "Dadlab",
+    "client": "Prototype/Portfolio",
+    "github": "https://github.com/GordonPmnt/smile",
+    "mainStacks": [ "JavaScript", "React.js", "Node.js" ],
+    "stackIcons": [ "js_badge.svg", "react.svg", "nodejs_small.svg" ],
+    "picture": "dadlab.jpg",
+    "description": ""
 }, {
     "id": 4,
-    "name": "Project 4",
+    "name": "Airtable Manager",
     "client": "This app is used by a property management company",
     "github": "Private repository",
-    "mainStacks": [ "JavaScript", "Python", "React.js" ],
-    "stackIcons": [ "js_badge.svg", "python.svg", "react.svg" ],
-    "picture": "project.jpg",
-    "description": "This project is the best project ever and ever forever and ever. We used so many awesome yechnologies, the project manager was so good and everybody was happy. Love, peace..."
+    "mainStacks": [ "Python", "Django", "SQL" ],
+    "stackIcons": [ "python.svg", "django.svg", "database.svg" ],
+    "picture": "airtable.png",
+    "description": ""
 }, {
     "id": 5,
-    "name": "Project 5",
-    "client": "This app is used by a property management company",
+    "name": "eXe",
+    "client": "This is the website you currently are on ;)",
+    "github": "https://github.com/GordonPmnt/exe",
+    "mainStacks": [ "JavaScript", "React.js" ],
+    "stackIcons": [ "js_badge.svg", "react.svg" ],
+    "picture": "exe.png",
+    "description": ""
+}, {
+    "id": 6,
+    "name": "VBA Missions",
+    "client": "For companies based in Brussels, Geneva, Paris and Luxemburg",
+    "github": "N/A",
+    "mainStacks": [ "VBA", "SQL" ],
+    "stackIcons": [ "windows.svg", "database.svg" ],
+    "picture": "reporting.jpg",
+    "description": ""
+}, {
+    "id": 7,
+    "name": "Be Angels",
+    "client": "Be Angels",
     "github": "Private repository",
-    "mainStacks": [ "JavaScript", "Python", "React.js" ],
-    "stackIcons": [ "js_badge.svg", "python.svg", "react.svg" ],
-    "picture": "project.jpg",
-    "description": "This project is the best project ever and ever forever and ever. We used so many awesome yechnologies, the project manager was so good and everybody was happy. Love, peace..."
+    "mainStacks": [ "JavaScript", "React.js", "Node.js", "SQL" ],
+    "stackIcons": [ "js_badge.svg", "react.svg", "nodejs_small.svg", "database.svg" ],
+    "picture": "beangels.png",
+    "description": ""
 }]
