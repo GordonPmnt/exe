@@ -21,8 +21,6 @@ const App = () => {
       {/* End of routes */}
 
       <Contact />
-
-      <Footer />
     </>
   );
 }

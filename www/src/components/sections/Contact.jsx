@@ -10,9 +10,10 @@ const ContactForm = styled.form`
     display: flex;
     flex-direction: column;
     margin: 5% 5%;
+    padding-bottom: 5%;
 
     @media ${device.tablet} {
-        margin: 5% 25%;
+        margin: 5% 25% 0 25%;
     }
 `
 
@@ -104,8 +105,6 @@ const Contact = () => {
         <Section
             id="contact"
             background={colors.darkGrey}
-            width="100vw"
-            height="90vh"
         >
             <Title title="CONTACT" color={colors.darkerWhite}/>
             <SubTitle>Have a question or want to work together?</SubTitle>
