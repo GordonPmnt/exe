@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import colors from '../../styles/colors';
 import Title from '../sub-compo/Title';
 import device from '../../styles/device';
+import axios from 'axios';
 
 const ContactForm = styled.form`
     display: flex;
@@ -74,6 +75,27 @@ const Contact = () => {
     const [ email, setEmail ] = useState('');
     const [ message, setMessage ] = useState('');
 
+    const handleSubmit = event => {
+        event.preventDefault()
+        axios({
+            method: "POST", 
+            url:"http://localhost:3002/send", 
+            data: {
+                name,
+                email,
+                message
+            }
+        })
+        .then( response => {
+            if (response.data.status === 'success') {
+                console.log('success')
+            }
+            if(response.data.status === 'fail') {
+                console.log('fail')
+            }
+        })
+    }
+
     return (
         <Section
             id="contact"
@@ -83,7 +105,7 @@ const Contact = () => {
         >
             <Title title="CONTACT" color={colors.darkerWhite}/>
             <SubTitle>Have a question or want to work together?</SubTitle>
-            <ContactForm>
+            <ContactForm onSubmit={handleSubmit}>
                 <TextInput 
                     name="name" 
                     placeholder="Name"
