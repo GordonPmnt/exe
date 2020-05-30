@@ -72,7 +72,9 @@ const Submit = styled.input`
 
 const Contact = () => {
     const [ name, setName ] = useState('');
+    const [ company, setCompany ] = useState('');
     const [ email, setEmail ] = useState('');
+    const [ phone, setPhone ] = useState('');
     const [ message, setMessage ] = useState('');
 
     const handleSubmit = event => {
@@ -83,6 +85,8 @@ const Contact = () => {
             data: {
                 name,
                 email,
+                company,
+                phone,
                 message
             }
         })
@@ -119,6 +123,18 @@ const Contact = () => {
                     value={email} 
                     onChange={event => setEmail(event.target.value)}
                     required
+                />
+                <TextInput 
+                    name="company"
+                    placeholder="Company name (optional)"
+                    value={company}
+                    onChange={event => setCompany(event.target.value)}
+                />
+                <TextInput
+                    name="phone"
+                    placeholder="Enter your phone number (optional)"
+                    value={phone}
+                    onChange={event => setPhone(event.target.value)}
                 />
                 <TextAreaInput 
                     placeholder="Your message" 
