@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import colors from '../../styles/colors';
 
-const Button = styled.button`
+const ButtonPink = styled.button`
     color: #fff;
     padding: 5px 20px;
     margin: 0 5px;
@@ -19,4 +19,4 @@ const Button = styled.button`
       }
 `
 
-export default Button;
+export default ButtonPink;

@@ -6,12 +6,13 @@ import Title from '../sub-compo/Title';
 import Skill from '../sub-compo/Skill';
 import Link from '../sub-compo/Link';
 import device from '../../styles/device';
-import Button from '../sub-compo/Button';
+import ButtonPink from '../sub-compo/ButtonPink';
 
 const Skills = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin: 0 15%;
     
     @media ${device.laptop} {
         min-height: 350px;
@@ -85,7 +86,7 @@ const SubTitle = styled.h4`
     }
 `
 
-const Show = styled(Button)`
+const Show = styled(ButtonPink)`
     font-size: 1rem;
     border-radius: 8px;
     cursor: pointer;
