@@ -1,8 +1,12 @@
 import React from 'react';
+import Section from './Section'
+import colors from '../../styles/colors';
 
 const Footer = () => {
     return (
-        <p>Footer</p>
+        <Section background={colors.darkBlue} height="10vh">
+            Footer
+        </Section>
     )
 }
 
