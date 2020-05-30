@@ -39,8 +39,8 @@
     "name": "eXe",
     "client": "This is the website you currently are on ;)",
     "github": "https://github.com/GordonPmnt/exe",
-    "mainStacks": [ "JavaScript", "React.js" ],
-    "stackIcons": [ "js_badge.svg", "react.svg" ],
+    "mainStacks": [ "JavaScript", "React.js", "Node.js" ],
+    "stackIcons": [ "js_badge.svg", "react.svg", "nodejs_small.svg" ],
     "picture": "exe.png",
     "description": ""
 }, {
