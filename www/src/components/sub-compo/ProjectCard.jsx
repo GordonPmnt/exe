@@ -91,9 +91,9 @@ const ProjectCard = ({ id, name, mainStacks, stackIcons, picture }) => {
                 <List>
                 {
                     mainStacks.map((subSkill, index) =>
-                        <SkillContainer key={id}>
+                        <SkillContainer key={id + index}>
                             <SubSkill 
-                                key={id} 
+                                key={id + index} 
                                 subSkill={subSkill} 
                                 index={index} 
                                 svg={stackIcons} 
