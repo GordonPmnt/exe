@@ -42,13 +42,13 @@ transporter.verify((error, success) => {
 });
 
 router.post('/send', (req, res, next) => {
-    const { name, email, message } = req.body
-    const content = `name: ${name} \n email: ${email} \n message: ${message} `
+    const { name, email, company, phone, message } = req.body
+    const content = ` name: ${name} \n email: ${email} \n phone: ${phone} \n company: ${company} \n \n${message}`
 
     const mail = {
         from: name,
         to: 'gordon.preumont@exe-solutions.com',
-        subject: `New Message from ${name}`,
+        subject: `eXe : New Message from ${name}`,
         text: content
     }
     console.log('pouet')
