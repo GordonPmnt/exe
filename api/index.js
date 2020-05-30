@@ -1,20 +1,33 @@
 const express = require('express');
 const router = express.Router();
-const nodemailer = require('nodemailer');
-const http = require('http');
-const creds = require('./config');
-const app = require('./app')
+const app = express();
+const cors = require('cors');
 
-const server = http.createServer(app);
+const auth2Config = require('./config');
+
+const nodemailer = require("nodemailer");
+const { google } = require("googleapis");
+const OAuth2 = google.auth.OAuth2;
+const oauth2Client = new OAuth2(
+    auth2Config.CLIENT_ID,
+    auth2Config.CLIENT_SECRET,
+    auth2Config.REDIRECT_URL
+);
+
+oauth2Client.setCredentials({
+    refresh_token: auth2Config.TOKEN.refresh_token
+});
+const accessToken = oauth2Client.getAccessToken()
 
 const transport = {
-    host: 'smtp.gmail.com',
-    port: 587,
+    service: "gmail",
     auth: {
-        type: 'OAuth2',
-        user: creds.USER,
-        pass: creds.PASS,
-        accessToken: creds.TOKEN
+        type: "OAuth2",
+        user: auth2Config.USER, 
+        clientId: auth2Config.CLIENT_ID,
+        clientSecret: auth2Config.CLIENT_SECRET,
+        refreshToken: auth2Config.TOKEN.refresh_token,
+        accessToken: accessToken
     }
 }
 
@@ -29,24 +42,24 @@ transporter.verify((error, success) => {
 });
 
 router.post('/send', (req, res, next) => {
-    var name = req.body.name
-    var email = req.body.email
-    var message = req.body.message
-    var content = `name: ${name} \n email: ${email} \n message: ${message} `
+    const { name, email, message } = req.body
+    const content = `name: ${name} \n email: ${email} \n message: ${message} `
 
-    var mail = {
+    const mail = {
         from: name,
         to: 'gordon.preumont@exe-solutions.com',
         subject: `New Message from ${name}`,
         text: content
     }
-
+    console.log('pouet')
     transporter.sendMail(mail, (err, data) => {
         if (err) {
+            console.log(err)
             res.json({
                 status: 'fail'
             })
         } else {
+            console.log(data)
             res.json({
                 status: 'success'
             })
@@ -54,6 +67,15 @@ router.post('/send', (req, res, next) => {
     })
 })
 
-server.listen(3002, () => {
+app.use(cors())
+app.use(express.json())
+app.use('/', router)
+
+// Middleware
+app.use((req, res, next) => { 
+    console.log('ON: ', req.headers.host, req.url);
+    next();
+});
+app.listen(3002, () => {
     console.log(`Server Listening on port 3002`)
 });
