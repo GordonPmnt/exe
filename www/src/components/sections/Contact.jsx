@@ -19,7 +19,7 @@ const ContactForm = styled.form`
 const Input = styled.input`
     background: ${colors.darkBlue};
     border: solid 2px ${colors.darkGrey};
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: ${colors.darkerWhite};
     padding: 10px;
 `
@@ -28,7 +28,7 @@ const TextInput = props => <Input type="text" {...props} />
 const TextAreaInput = styled.textarea`
     background: ${colors.darkBlue};
     border: solid 2px ${colors.darkGrey};
-    font-size: 1.1rem;
+    font-size: 1rem;
     height: 200px;
     color: ${colors.darkerWhite};
     padding: 10px;
@@ -110,20 +110,20 @@ const Contact = () => {
                     name="name" 
                     placeholder="Name"
                     value={name}
-                    onChange={() => setName()}
+                    onChange={event => setName(event.target.value)}
                     require
                 />
                 <TextInput 
                     name="email" 
                     placeholder="Enter email"
                     value={email} 
-                    onChange={() => setEmail()}
+                    onChange={event => setEmail(event.target.value)}
                     require
                 />
                 <TextAreaInput 
                     placeholder="Your message" 
                     value={message}
-                    onChange={() => setMessage()}
+                    onChange={event => setMessage(event.target.value)}
                     require
                 />
                 <Submit 
