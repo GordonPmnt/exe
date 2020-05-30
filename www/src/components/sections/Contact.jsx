@@ -111,20 +111,20 @@ const Contact = () => {
                     placeholder="Name"
                     value={name}
                     onChange={event => setName(event.target.value)}
-                    require
+                    required
                 />
                 <TextInput 
                     name="email" 
                     placeholder="Enter email"
                     value={email} 
                     onChange={event => setEmail(event.target.value)}
-                    require
+                    required
                 />
                 <TextAreaInput 
                     placeholder="Your message" 
                     value={message}
                     onChange={event => setMessage(event.target.value)}
-                    require
+                    required
                 />
                 <Submit 
                     fontSize="1rem"
