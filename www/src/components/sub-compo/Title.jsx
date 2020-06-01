@@ -6,7 +6,7 @@ const TitleText = styled.h3`
     text-align: center;
     font-size: 2rem;
     margin: 0;
-    padding-top: 50px;
+    padding-top: ${({ paddingTop }) => paddingTop || '50px' } ;
     ${({ color }) => color ? 'color: ' + color + ';' : '' }
 
     @media ${device.laptop} {
@@ -25,10 +25,10 @@ const TitleRow = styled.h3`
     }
 `
 
-const Title = ({ title, color, rowMargin }) => {
+const Title = ({ title, color, rowMargin, paddingTop }) => {
     return (
         <>
-            <TitleText color={color}>{title}</TitleText>
+            <TitleText color={color} paddingTop={paddingTop}>{title}</TitleText>
             <TitleRow color={color} rowMargin={rowMargin}> ▔▔ </TitleRow>
         </>
     )
