@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from './Link';
+import LinkText from './LinkText';
 import device from '../../styles/device';
 import colors from '../../styles/colors';
 
@@ -23,10 +23,10 @@ const Nav = styled.nav`
 const Navbar = () => {
     return (
         <Nav>
-            <Link href="#home">HOME</Link>
-            <Link href="#about">ABOUT</Link>
-            <Link href="#portfolio">PORTFOLIO</Link>
-            <Link href="#contact">CONTACT</Link>
+            <LinkText href="#home">HOME</LinkText>
+            <LinkText href="#about">ABOUT</LinkText>
+            <LinkText href="#portfolio">PORTFOLIO</LinkText>
+            <LinkText href="#contact">CONTACT</LinkText>
         </Nav>
     )
 }

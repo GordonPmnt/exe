@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import colors from '../../styles/colors';
 import Title from '../sub-compo/Title';
 import Skill from '../sub-compo/Skill';
-import Link from '../sub-compo/Link';
+import LinkText from '../sub-compo/LinkText';
 import device from '../../styles/device';
 import ButtonPink from '../sub-compo/ButtonPink';
 
@@ -68,7 +68,7 @@ const BioText = styled.div`
     }
 `
 
-const Contact = styled(Link)`
+const Contact = styled(LinkText)`
     color: ${colors.turkoise};
 `
 

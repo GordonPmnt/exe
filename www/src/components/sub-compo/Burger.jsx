@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import device from '../../styles/device';
 import colors from '../../styles/colors';
 import { useOnClickOutside } from '../utils/hooks';
-import Link from '../sub-compo/Link';
+import Linktext from './LinkText';
 
 const Container = styled.div`
   position: fixed;
@@ -62,10 +62,10 @@ const Burger = () => {
         </Button>
       </Nav>
       <Menu open={open} onClick={() => setOpen(!open)}>
-        <Link href="#home">HOME</Link>
-        <Link href="#about">ABOUT</Link>
-        <Link href="#portfolio">PORTFOLIO</Link>
-        <Link href="#contact">CONTACT</Link>
+        <Linktext href="#home">HOME</Linktext>
+        <Linktext href="#about">ABOUT</Linktext>
+        <Linktext href="#portfolio">PORTFOLIO</Linktext>
+        <Linktext href="#contact">CONTACT</Linktext>
       </Menu>
     </Container>
   )

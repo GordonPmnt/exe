@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import colors from '../../styles/colors';
 
-const Link = styled.a`
+const LinkText = styled.a`
     color: #fff;
     text-decoration: none;
     margin: 5px 15px;
@@ -12,4 +12,4 @@ const Link = styled.a`
     }
 `
 
-export default Link;
+export default LinkText;
