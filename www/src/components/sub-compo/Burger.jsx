@@ -7,6 +7,7 @@ import { useOnClickOutside } from '../utils/hooks';
 import Link from '../sub-compo/Link';
 
 const Container = styled.div`
+  position: fixed;
   display: initial;
   z-index: 100;
 
@@ -16,7 +17,6 @@ const Container = styled.div`
 `
 
 const Nav = styled.nav`
-  position: fixed;
   border-bottom: solid 3px ${colors.turkoise};
   padding: 5px 10px;
   background: ${colors.darkBlue};
@@ -40,9 +40,10 @@ const Menu = styled.div`
   flex-direction: column;
   background: ${colors.darkBlue};
   width: 100vw;
-  position: absolute;
+  position: relative;
   border-bottom: solid 3px ${colors.turkoise};
-  transform: ${({ open }) => open ? 'translateY(0)' : 'translateY(-100%)'};
+  top: -45px;
+  transform: ${({ open }) => open ? 'translateY(10px)' : 'translateY(-100%)'};
   transition: transform 0.3s ease-out;
 `
 
