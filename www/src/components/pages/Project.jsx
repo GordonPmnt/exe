@@ -7,10 +7,14 @@ import Navbar from '../sub-compo/Navbar';
 import styled from 'styled-components';
 import Title from '../sub-compo/Title';
 import { LinkA } from '../sub-compo/LinkText';
+import Carousel from '../sub-compo/Carousel';
+import testingPics from '../utils/testingPics';
+import Grid from '@material-ui/core/Grid';
+import device from '../../styles/device';
 
 const Container = styled(Section)`
     min-height: calc(100vh - 190px);
-    padding-top: 15px;
+    padding-top: 35px;
     margin: 0;
 `
 
@@ -22,6 +26,12 @@ const Git = styled(LinkA)`
 const Meta = styled.ul`
     list-style: none;
     margin: 0;
+    padding: 0 10%;
+    overflow: scroll;
+
+    @media ${device.laptop} {
+        max-height: calc(100vh - 190px);
+    }
 `
 
 const Attribute = styled.li`
@@ -54,33 +64,42 @@ const Project = () => {
             <Burger />
             <Navbar />
             <Container background={colors.darkerWhite}>
-                <Title title={project.name} />
-                <Meta>
-                    <Attribute>
-                        <span>&#10070;</span><b>Client: </b>
-                        {project.client}
-                    </Attribute>
-                    <Attribute>
-                        <span>&#10070;</span><b>Github: </b>
-                        {project.github.link
-                            ? <Git href={project.github.link}>{project.github.name}</Git>
-                            : project.github.name
-                        }
-                    </Attribute> 
-                    <Attribute>
-                        <span>&#10070;</span><b>Main stacks: </b>
-                        {project.mainStacks.map((stack, i) => 
-                            <Stack key={i}>
-                                <Icon src={require('../../ressources/SVG/' + project.stackIcons[i])} alt={stack} />
-                                {stack},
-                            </Stack>
-                        )}
-                    </Attribute>
-                    <Attribute>
-                        <span>&#10070;</span><b>Description: </b>
-                        {project.description}
-                    </Attribute>
-                </Meta>
+                <Grid container>
+                    <Grid item xs={12} lg={8}>
+                        <Carousel pictures={testingPics} />
+                    </Grid>
+                    <Grid item xs={12} lg={4}>
+                        <Meta>
+                            <Title title={project.name} paddingTop={'40px'} rowMargin={'20px'}/>
+                            <Attribute>
+                                <span>&#10070;</span><b>Client: </b>
+                                {project.client}
+                            </Attribute>
+                            <Attribute>
+                                <span>&#10070;</span><b>Github: </b>
+                                {project.github.link
+                                    ? <Git href={project.github.link}>Click here!</Git>
+                                    : project.github.name
+                                }
+                            </Attribute> 
+                            <Attribute>
+                                <span>&#10070;</span><b>Main stacks: </b>
+                                {project.mainStacks.map((stack, i) => 
+                                    <Stack key={i}>
+                                        <Icon src={require('../../ressources/SVG/' + project.stackIcons[i])} alt={stack} />
+                                        {stack},
+                                    </Stack>
+                                )}
+                            </Attribute>
+                            <br />
+                            <Attribute>
+                                <span>&#10070;</span><b>Description: </b>
+                                <br />
+                                {project.description}
+                            </Attribute>
+                        </Meta>
+                    </Grid>
+                </Grid>
             </Container>
         </>
     )
