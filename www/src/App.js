@@ -1,6 +1,4 @@
 import React from 'react';
-import Burger from './components/sub-compo/Burger';
-import Navbar from './components/sub-compo/Navbar';
 import Home from './components/pages/Home';
 import Project from './components/pages/Project';
 import Footer from './components/sub-compo/Footer';
