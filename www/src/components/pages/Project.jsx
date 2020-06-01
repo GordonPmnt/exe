@@ -13,9 +13,12 @@ import Grid from '@material-ui/core/Grid';
 import device from '../../styles/device';
 
 const Container = styled(Section)`
-    min-height: calc(100vh - 190px);
     padding-top: 35px;
     margin: 0;
+
+    @media ${device.laptop} {
+        height: calc(100vh - 190px);
+    }
 `
 
 const Git = styled(LinkA)`
@@ -30,7 +33,7 @@ const Meta = styled.ul`
     overflow: scroll;
 
     @media ${device.laptop} {
-        max-height: calc(100vh - 190px);
+        max-height: calc(100vh - 225px);
     }
 `
 

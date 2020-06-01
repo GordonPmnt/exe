@@ -13,19 +13,22 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const Container = styled.div`
   .MuiPaper-root {
-    background: ${colors.darkerWhite};
+    background: ${colors.darkerWhite}; 
+    opacity 0.5;
   }
 
   @media ${device.laptop} {
-    height: calc(100vh - 190px);
-    width: calc(100% - 75px);
+    height: calc(100vh - 225px);
   }
 `
 
 const Picture = styled.img`
   display: block;
-  overflow: 'hidden';
   width: 100%;
+
+  @media ${device.laptop} {
+    height: calc(100vh - 225px);
+  }
 `
 
 const CarouselButton = styled(Button)`
@@ -67,9 +70,10 @@ const Carousel = ({ pictures }) => {
         ))}
       </AutoPlaySwipeableViews>
       <MobileStepper
+        style={{ position: 'relative', bottom: '50px' }}
         steps={maxSteps}
         position="static"
-        variant="text"
+        variant="dots"
         activeStep={activeStep}
         nextButton={
           <CarouselButton size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
