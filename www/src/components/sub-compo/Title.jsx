@@ -17,7 +17,7 @@ const TitleText = styled.h3`
 const TitleRow = styled.h3`
     text-align: center;
     font-size: 1.8rem;
-    margin: 0 0 50px 0;
+    margin: 0 0 ${({ rowMargin }) => rowMargin || '50px' } 0;
     ${({ color }) => color ? 'color: ' + color + ';' : '' }
 
     @media ${device.laptop} {
@@ -25,11 +25,11 @@ const TitleRow = styled.h3`
     }
 `
 
-const Title = ({ title, color }) => {
+const Title = ({ title, color, rowMargin }) => {
     return (
         <>
             <TitleText color={color}>{title}</TitleText>
-            <TitleRow color={color}> ▔▔ </TitleRow>
+            <TitleRow color={color} rowMargin={rowMargin}> ▔▔ </TitleRow>
         </>
     )
 }
