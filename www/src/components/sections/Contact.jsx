@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import colors from '../../styles/colors';
 import Title from '../sub-compo/Title';
 import device from '../../styles/device';
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
 import axios from 'axios';
 
 const ContactForm = styled.form`
@@ -71,12 +73,16 @@ const Submit = styled.input`
     }
 `
 
+const Alert = props => <MuiAlert elevation={6} variant="filled" {...props} />;
+
 const Contact = () => {
     const [ name, setName ] = useState('');
     const [ company, setCompany ] = useState('');
     const [ email, setEmail ] = useState('');
     const [ phone, setPhone ] = useState('');
     const [ message, setMessage ] = useState('');
+    const [ success, setSuccess ] = useState(false);
+    const [ fail, setFail ] = useState(false);
 
     const handleSubmit = event => {
         event.preventDefault()
@@ -93,10 +99,16 @@ const Contact = () => {
         })
         .then( response => {
             if (response.data.status === 'success') {
-                console.log('success')
+                setName('')
+                setCompany('')
+                setEmail('')
+                setPhone('')
+                setMessage('')
+                setSuccess(true)
             }
             if(response.data.status === 'fail') {
                 console.log('fail')
+                setFail(true)
             }
         })
     }
@@ -146,6 +158,20 @@ const Contact = () => {
                     value="SUBMIT"
                     type="submit"
                 />
+
+                {/* SNACKBARS */}
+                <Snackbar open={success} autoHideDuration={6000} onClose={() => setSuccess(false)}>
+                    <Alert onClose={() => setSuccess(false)} severity="success">
+                        Thanks, your message has successfully been sent.
+                    </Alert>
+                </Snackbar>
+                <Snackbar open={fail} autoHideDuration={8000} onClose={() => setFail(false)}>
+                    <Alert onClose={() => setFail(false)} severity="error">
+                        It seem's there is problem, you message couldn't be sent. Please try to reach my directly by email.
+                    </Alert>
+                </Snackbar>
+                {/* END SNACKBARS */}
+
             </ContactForm>
         </Section>
     )
