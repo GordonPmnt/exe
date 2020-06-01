@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import device from '../../styles/device';
 import colors from '../../styles/colors';
 import { useOnClickOutside } from '../utils/hooks';
+import { Link } from "react-router-dom";
 import LinkText from './LinkText';
 
 const Container = styled.div`
@@ -47,6 +48,10 @@ const Menu = styled.div`
   transition: transform 0.3s ease-out;
 `
 
+const LinkSimple = styled(Link)`
+    text-decoration: none;
+`
+
 const Burger = () => {
 
   const [ open, setOpen ] = useState(false)
@@ -54,12 +59,19 @@ const Burger = () => {
   const node = useRef(); 
   useOnClickOutside(node, () => setOpen(false));
 
+  const pathName = window.location.pathname;
+
   return (
     <Container ref={node}>
       <Nav>
-        <Button onClick={() => setOpen(!open)}>
-          <DehazeIcon />
-        </Button>
+        {pathName.includes('project') 
+        ?
+          <LinkSimple to="/"><LinkText>{'< BACK'}</LinkText></LinkSimple>
+        :
+          <Button onClick={() => setOpen(!open)}>
+            <DehazeIcon />
+          </Button>
+        }
       </Nav>
       <Menu open={open} onClick={() => setOpen(!open)}>
         <LinkText href="#home">HOME</LinkText>

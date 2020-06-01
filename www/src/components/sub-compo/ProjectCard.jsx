@@ -4,6 +4,7 @@ import colors from '../../styles/colors';
 import { Collapse } from '@material-ui/core';
 import device from '../../styles/device';
 import SubSkill from './SubSkill';
+import { Link } from "react-router-dom";
 
 const Card = styled.div`
     height: 240px;
@@ -35,7 +36,7 @@ const List = styled.ul`
     justify-content: center;
 `
 
-const LinkProject = styled.a`
+const LinkProject = styled(Link)`
     border: 2px solid ${colors.pinkMexican};
     text-decoration: none;
     background: transparent;
@@ -104,7 +105,7 @@ const ProjectCard = ({ id, name, mainStacks, stackIcons, picture }) => {
                 </List>
             </Collapse>
             <Collapse in={checked} timeout={400}>
-                <LinkProject>LEARN MORE</LinkProject>
+                <LinkProject to={`/project/${id}`}>LEARN MORE</LinkProject>
             </Collapse>
         </Card>
     )

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import LinkText from './LinkText';
 import device from '../../styles/device';
 import colors from '../../styles/colors';
+import { Link } from "react-router-dom";
 
 const Nav = styled.nav`
     display: none;
@@ -20,13 +21,26 @@ const Nav = styled.nav`
     }
 `
 
+const LinkSimple = styled(Link)`
+    text-decoration: none;
+`
+
 const Navbar = () => {
+    const pathName = window.location.pathname;
     return (
+        
         <Nav>
-            <LinkText href="#home">HOME</LinkText>
-            <LinkText href="#about">ABOUT</LinkText>
-            <LinkText href="#portfolio">PORTFOLIO</LinkText>
-            <LinkText href="#contact">CONTACT</LinkText>
+            {pathName.includes('project') 
+            ?
+                <LinkSimple to="/"><LinkText>{'< BACK'}</LinkText></LinkSimple>
+            :
+                <>
+                    <LinkText href="#home">HOME</LinkText>
+                    <LinkText href="#about">ABOUT</LinkText>
+                    <LinkText href="#portfolio">PORTFOLIO</LinkText>
+                    <LinkText href="#contact">CONTACT</LinkText>
+                </>
+            }
         </Nav>
     )
 }

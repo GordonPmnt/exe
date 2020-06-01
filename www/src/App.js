@@ -1,25 +1,20 @@
 import React from 'react';
-import Hero from './components/sections/Hero';
 import Burger from './components/sub-compo/Burger';
 import Navbar from './components/sub-compo/Navbar';
-import About from './components/sections/About';
-import Portfolio from './components/sections/Portfolio';
-import Contact from './components/sections/Contact';
+import Home from './components/pages/Home';
+import Project from './components/pages/Project';
 import Footer from './components/sub-compo/Footer';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <>
-      <Burger />
-      <Navbar />
-
-      <Hero />
-      <About />
-      <Portfolio />
-      <Contact />
-
+    <Router>      
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/project/:id" component={Project} />
+      </Switch>
       <Footer />
-    </>
+    </Router>
   );
 }
 
