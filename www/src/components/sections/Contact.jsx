@@ -11,7 +11,7 @@ import axios from 'axios';
 const ContactForm = styled.form`
     display: flex;
     flex-direction: column;
-    margin: 5% 5%;
+    margin: 5% 5% 0 5%;
     padding-bottom: 5%;
 
     @media ${device.tablet} {
@@ -167,7 +167,7 @@ const Contact = () => {
                 </Snackbar>
                 <Snackbar open={fail} autoHideDuration={8000} onClose={() => setFail(false)}>
                     <Alert onClose={() => setFail(false)} severity="error">
-                        It seem's there is problem, you message couldn't be sent. Please try to reach my directly by email.
+                        It seem's there is problem, you message couldn't be sent. Please try to reach me on Linkedin.
                     </Alert>
                 </Snackbar>
                 {/* END SNACKBARS */}
