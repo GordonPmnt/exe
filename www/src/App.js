@@ -15,12 +15,10 @@ const App = () => {
 
       <Hero />
       <About />
-
-      {/* Writte routes as from here */}
       <Portfolio />
-      {/* End of routes */}
-
       <Contact />
+
+      <Footer />
     </>
   );
 }
