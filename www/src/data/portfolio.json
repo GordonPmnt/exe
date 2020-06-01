@@ -2,7 +2,10 @@
     "id": 1,
     "name": "Hermes",
     "client": "Wild Code School",
-    "github": "https://github.com/GordonPmnt/hermes",
+    "github": {
+        "name": "Hermes",
+        "link": "https://github.com/GordonPmnt/hermes"
+    },
     "mainStacks": [ "JavaScript", "Chrome dev." ],
     "stackIcons": [ "js_badge.svg", "chrome.svg" ],
     "picture": "hermes.png",
@@ -11,7 +14,10 @@
     "id": 2,
     "name": "Lazy Postcard",
     "client": "Hackathon",
-    "github": "https://github.com/GordonPmnt/wild-hackathon",
+    "github": {
+        "name": "Lazy Postcard",
+        "link": "https://github.com/GordonPmnt/wild-hackathon"
+    },
     "mainStacks": [ "JavaScript", "React.js" ],
     "stackIcons": [ "js_badge.svg", "react.svg" ],
     "picture": "lazy.png",
@@ -20,7 +26,10 @@
     "id": 3,
     "name": "Dadlab",
     "client": "Prototype/Portfolio",
-    "github": "https://github.com/GordonPmnt/smile",
+    "github": {
+        "name": "Dadlab",
+        "link": "https://github.com/GordonPmnt/smile"
+    },
     "mainStacks": [ "JavaScript", "React.js", "Node.js" ],
     "stackIcons": [ "js_badge.svg", "react.svg", "nodejs_small.svg" ],
     "picture": "dadlab.jpg",
@@ -29,7 +38,10 @@
     "id": 4,
     "name": "Airtable Manager",
     "client": "This app is used by a property management company",
-    "github": "Private repository",
+    "github": {
+        "name": "Private repository",
+        "link": null
+    },
     "mainStacks": [ "Python", "Django", "SQL" ],
     "stackIcons": [ "python.svg", "django.svg", "database.svg" ],
     "picture": "airtable.png",
@@ -38,7 +50,10 @@
     "id": 5,
     "name": "eXe",
     "client": "This is the website you currently are on ;)",
-    "github": "https://github.com/GordonPmnt/exe",
+    "github": {
+        "name": "eXe",
+        "link": "https://github.com/GordonPmnt/exe"
+    },
     "mainStacks": [ "JavaScript", "React.js", "Node.js" ],
     "stackIcons": [ "js_badge.svg", "react.svg", "nodejs_small.svg" ],
     "picture": "exe.png",
@@ -47,7 +62,10 @@
     "id": 6,
     "name": "VBA Missions",
     "client": "For companies based in Brussels, Geneva, Paris and Luxemburg",
-    "github": "N/A",
+    "github": {
+        "name": "N/A",
+        "link": null
+    },
     "mainStacks": [ "VBA", "SQL" ],
     "stackIcons": [ "windows.svg", "database.svg" ],
     "picture": "reporting.jpg",
@@ -56,7 +74,10 @@
     "id": 7,
     "name": "Be Angels",
     "client": "Be Angels",
-    "github": "Private repository",
+    "github": {
+        "name": "Private repository",
+        "link": null
+    },
     "mainStacks": [ "JavaScript", "React.js", "Node.js", "SQL" ],
     "stackIcons": [ "js_badge.svg", "react.svg", "nodejs_small.svg", "database.svg" ],
     "picture": "beangels.png",
@@ -65,7 +86,10 @@
     "id": 8,
     "name": "Covid Solidarity",
     "client": "Covid Solidarity",
-    "github": "Private repository",
+    "github": {
+        "name": "Private repository",
+        "link": null
+    },
     "mainStacks": [ "JavaScript", "React.js", "Node.js", "SQL" ],
     "stackIcons": [ "js_badge.svg", "react.svg", "nodejs_small.svg", "database.svg" ],
     "picture": "team.png",
