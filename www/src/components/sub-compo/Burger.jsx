@@ -5,7 +5,7 @@ import device from '../../styles/device';
 import colors from '../../styles/colors';
 import { useOnClickOutside } from '../utils/hooks';
 import { Link } from "react-router-dom";
-import LinkText from './LinkText';
+import { LinkA, LinkP } from './LinkText';
 
 const Container = styled.div`
   position: fixed;
@@ -66,7 +66,7 @@ const Burger = () => {
       <Nav>
         {pathName.includes('project') 
         ?
-          <LinkSimple to="/"><LinkText>{'< BACK'}</LinkText></LinkSimple>
+          <LinkSimple to="/"><LinkP>{'< BACK'}</LinkP></LinkSimple>
         :
           <Button onClick={() => setOpen(!open)}>
             <DehazeIcon />
@@ -74,10 +74,10 @@ const Burger = () => {
         }
       </Nav>
       <Menu open={open} onClick={() => setOpen(!open)}>
-        <LinkText href="#home">HOME</LinkText>
-        <LinkText href="#about">ABOUT</LinkText>
-        <LinkText href="#portfolio">PORTFOLIO</LinkText>
-        <LinkText href="#contact">CONTACT</LinkText>
+        <LinkA href="#home">HOME</LinkA>
+        <LinkA href="#about">ABOUT</LinkA>
+        <LinkA href="#portfolio">PORTFOLIO</LinkA>
+        <LinkA href="#contact">CONTACT</LinkA>
       </Menu>
     </Container>
   )
