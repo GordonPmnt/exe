@@ -35,7 +35,7 @@ const Signature = styled.p`
 
 const Footer = () => {
     return (
-        <Section background={colors.darkBlue} height="190px">
+        <Section background={colors.darkBlue} height="150px">
             <Icons>
                 <FooterButton href="https://www.linkedin.com/in/gordon-preumont-fullstack/">
                     <LinkedInIcon fontSize="inherit" />

@@ -18,7 +18,7 @@ const Container = styled.div`
   }
 
   @media ${device.laptop} {
-    height: calc(100vh - 225px);
+    height: calc(100vh - 185px);
   }
 `
 
@@ -27,7 +27,7 @@ const Picture = styled.img`
   width: 100%;
 
   @media ${device.laptop} {
-    height: calc(100vh - 225px);
+    height: calc(100vh - 185px);
   }
 `
 

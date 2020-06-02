@@ -17,7 +17,7 @@ const Container = styled(Section)`
     margin: 0;
 
     @media ${device.laptop} {
-        height: calc(100vh - 190px);
+        height: calc(100vh - 150px);
     }
 `
 
@@ -33,7 +33,7 @@ const Meta = styled.ul`
     overflow: scroll;
 
     @media ${device.laptop} {
-        max-height: calc(100vh - 225px);
+        max-height: calc(100vh - 185px);
     }
 `
 
