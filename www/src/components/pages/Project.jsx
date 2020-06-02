@@ -8,12 +8,11 @@ import styled from 'styled-components';
 import Title from '../sub-compo/Title';
 import { LinkA } from '../sub-compo/LinkText';
 import Carousel from '../sub-compo/Carousel';
-import testingPics from '../utils/testingPics';
 import Grid from '@material-ui/core/Grid';
 import device from '../../styles/device';
 
 const Container = styled(Section)`
-    padding-top: 35px;
+    padding-top: 40px;
     margin: 0;
 
     @media ${device.laptop} {
@@ -34,7 +33,7 @@ const Meta = styled.ul`
     background: ${colors.darkerWhite};
 
     @media ${device.laptop} {
-        height: calc(100vh - 185px);
+        height: calc(100vh - 190px);
     }
 `
 
@@ -67,10 +66,10 @@ const Project = () => {
         <>
             <Burger />
             <Navbar />
-            <Container background={colors.darkBlue}>
+            <Container background={colors.white}>
                 <Grid container>
                     <Grid item xs={12} lg={8}>
-                        <Carousel pictures={testingPics} />
+                        <Carousel pictures={project.illustrations.map(pic => require('../../ressources/portfolio/' + pic))} />
                     </Grid>
                     <Grid item xs={12} lg={4}>
                         <Meta>
@@ -99,7 +98,7 @@ const Project = () => {
                             <Attribute>
                                 <span>&#10070;</span><b>Description: </b>
                                 <br />
-                                {project.description}
+                                <div dangerouslySetInnerHTML={{__html: project.description }} />
                             </Attribute>
                         </Meta>
                     </Grid>
