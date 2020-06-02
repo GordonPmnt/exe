@@ -16,10 +16,6 @@ const Container = styled.div`
     background: ${colors.darkerWhite}; 
     opacity 0.5;
   }
-
-  @media ${device.laptop} {
-    height: calc(100vh - 185px);
-  }
 `
 
 const Picture = styled.img`
@@ -27,7 +23,8 @@ const Picture = styled.img`
   width: 100%;
 
   @media ${device.laptop} {
-    height: calc(100vh - 185px);
+    max-height: calc(100vh - 185px);
+    width: 100%;
   }
 `
 

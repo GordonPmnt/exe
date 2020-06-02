@@ -31,9 +31,10 @@ const Meta = styled.ul`
     margin: 0;
     padding: 0 10%;
     overflow: scroll;
+    background: ${colors.darkerWhite};
 
     @media ${device.laptop} {
-        max-height: calc(100vh - 185px);
+        height: calc(100vh - 185px);
     }
 `
 
@@ -66,7 +67,7 @@ const Project = () => {
         <>
             <Burger />
             <Navbar />
-            <Container background={colors.darkerWhite}>
+            <Container background={colors.darkBlue}>
                 <Grid container>
                     <Grid item xs={12} lg={8}>
                         <Carousel pictures={testingPics} />
