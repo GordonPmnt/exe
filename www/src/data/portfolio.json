@@ -21,8 +21,9 @@
     },
     "mainStacks": [ "JavaScript", "React.js" ],
     "stackIcons": [ "js_badge.svg", "react.svg" ],
+    "illustrations": ["postcard/postcard1.png", "postcard/postcard2.png", "postcard/postcard3.png", "postcard/postcard4.png", "postcard/postcard5.png", "postcard/postcard6.png", "postcard/postcard7.png"],
     "picture": "lazy.png",
-    "description": ""
+    "description": "<p>Lazy Postcard is a project with which I won a Hackathon. The Hackathon thematic was <em>how can you travel from couch during lockdown</em>?<p>With my team, we decided to offer a system to keep sending postcards from all over the world in order to make your friends and colleagues jaelous...but...staying at home.</p><p>Our system connects to windy API allowing to take pictures from a global webcam meteo network. We locate webcams on Google Map allowing the user to choose it's destination and to explore available webcams in the area.</p><p>Firstly choose your cam, then take a picture of the landscape and a selfie using your own webcam. Type a friendly message and send a postcard to your friends through Facebook or Instagram.</p>"
 }, {
     "id": 3,
     "name": "Dadlab",
