@@ -16,7 +16,7 @@ const ButtonPink = styled.button`
 
     &:focus {
         outline: none;
-      }
+    }
 `
 
 export default ButtonPink;
