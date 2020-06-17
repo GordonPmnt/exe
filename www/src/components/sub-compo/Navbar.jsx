@@ -13,7 +13,7 @@ const Nav = styled.nav`
         background: ${colors.darkBlue};
         display: initial;
         position: fixed;
-        border-bottom: solid 5px ${colors.turkoise};
+        border-bottom: solid 3px ${colors.turkoise};
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 5%;
