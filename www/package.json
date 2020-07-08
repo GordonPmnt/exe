@@ -17,6 +17,10 @@
     "react-swipeable-views": "^0.13.9",
     "styled-components": "^5.1.0"
   },
+  "engines": {
+    "npm": "6.14.5",
+    "node": "13.12.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
