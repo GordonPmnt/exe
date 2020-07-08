@@ -21,6 +21,7 @@ const Card = styled.div`
 
     &:hover {
         background-image: linear-gradient(white, transparent);
+    }
 `
 
 const Header = styled.h3`
