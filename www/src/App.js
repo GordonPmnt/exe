@@ -1,6 +1,7 @@
 import React from 'react';
-import Home from './components/pages/Home';
-import Project from './components/pages/Project';
+import Home from './components/routes/Home';
+import Admin from './components/routes/Admin';
+import Project from './components/routes/Project';
 import Footer from './components/sub-compo/Footer';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -8,8 +9,9 @@ const App = () => {
   return (
     <Router>      
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/project/:id" component={Project} />
+        <Route exact path="/" render={() => <Home />} />
+        <Route path="/project/:id" render={() => <Project />} />
+        <Route path="/admin" render={() => <Admin />} />
       </Switch>
       <Footer />
     </Router>
