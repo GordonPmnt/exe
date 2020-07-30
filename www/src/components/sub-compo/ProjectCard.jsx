@@ -105,11 +105,9 @@ const ProjectCard = ({ id, name, mainStacks, stackIcons, picture }) => {
                 }
                 </List>
             </Collapse>
-            {false &&
             <Collapse in={checked} timeout={400}>
                 <LinkProject to={`/project/${id}`}>LEARN MORE</LinkProject>
             </Collapse>
-            }
         </Card>
     )
 }
