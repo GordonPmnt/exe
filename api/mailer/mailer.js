@@ -1,21 +1,18 @@
 const express = require('express');
 const router = express.Router();
-const app = express();
-const cors = require('cors');
-
-const auth2Config = require('./config');
-
+require('dotenv').config()
 const nodemailer = require("nodemailer");
 const { google } = require("googleapis");
+
 const OAuth2 = google.auth.OAuth2;
 const oauth2Client = new OAuth2(
-    auth2Config.CLIENT_ID,
-    auth2Config.CLIENT_SECRET,
-    auth2Config.REDIRECT_URL
+    process.env.GMAIL_CLIENT_ID,
+    process.env.GMAIL_CLIENT_SECRET,
+    process.env.GMAIL_REDIRECT_URI
 );
 
 oauth2Client.setCredentials({
-    refresh_token: auth2Config.TOKEN.refresh_token
+    refresh_token: process.env.GMAIL_REFRESH_TOKEN
 });
 const accessToken = oauth2Client.getAccessToken()
 
@@ -23,11 +20,11 @@ const transport = {
     service: "gmail",
     auth: {
         type: "OAuth2",
-        user: auth2Config.USER, 
-        clientId: auth2Config.CLIENT_ID,
-        clientSecret: auth2Config.CLIENT_SECRET,
-        refreshToken: auth2Config.TOKEN.refresh_token,
-        accessToken: accessToken
+        user: process.env.GMAIL_USER, 
+        clientId: process.env.GMAIL_CLIENT_ID,
+        clientSecret: process.env.GMAIL_CLIENT_SECRET,
+        refreshToken: process.env.GMAIL_REFRESH_TOKEN,
+        accessToken: accessToken,
     }
 }
 
@@ -51,7 +48,7 @@ router.post('/send', (req, res, next) => {
         subject: `eXe : New Message from ${name}`,
         text: content
     }
-    console.log('pouet')
+    
     transporter.sendMail(mail, (err, data) => {
         if (err) {
             console.log(err)
@@ -67,15 +64,4 @@ router.post('/send', (req, res, next) => {
     })
 })
 
-app.use(cors())
-app.use(express.json())
-app.use('/', router)
-
-// Middleware
-app.use((req, res, next) => { 
-    console.log('ON: ', req.headers.host, req.url);
-    next();
-});
-app.listen(3002, () => {
-    console.log(`Server Listening on port 3002`)
-});
+module.exports = router;
