@@ -66,7 +66,7 @@ const Burger = () => {
       <Nav>
         {pathName.includes('project') 
         ?
-          <LinkSimple to="/"><LinkText>{'< BACK'}</LinkText></LinkSimple>
+          <LinkSimple to="/"><LinkText>{'< HOME'}</LinkText></LinkSimple>
         :
           <Button onClick={() => setOpen(!open)}>
             <DehazeIcon />

@@ -28,11 +28,10 @@ const LinkSimple = styled(Link)`
 const Navbar = () => {
     const pathName = window.location.pathname;
     return (
-        
         <Nav>
             {pathName.includes('project') 
             ?
-                <LinkSimple to="/"><LinkText>{'< BACK'}</LinkText></LinkSimple>
+                <LinkSimple to="/"><LinkText>{'< HOME'}</LinkText></LinkSimple>
             :
                 <>
                     <LinkText href="#home">HOME</LinkText>
