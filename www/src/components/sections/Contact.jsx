@@ -25,6 +25,10 @@ const Input = styled.input`
     font-size: 1rem;
     color: ${colors.darkerWhite};
     padding: 10px;
+    
+    &:focus {
+        outline: none;
+    }
 `
 const TextInput = props => <Input type="text" {...props} />
 
@@ -35,6 +39,10 @@ const TextAreaInput = styled.textarea`
     height: 200px;
     color: ${colors.darkerWhite};
     padding: 10px;
+
+    &:focus {
+        outline: none;
+    }
 `
 
 const SubTitle = styled.h4`
