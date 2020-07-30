@@ -35,7 +35,7 @@
     "mainStacks": [ "JavaScript", "React.js", "Node.js" ],
     "stackIcons": [ "js_badge.svg", "react.svg", "nodejs_small.svg" ],
     "picture": "dadlab.jpg",
-    "description": ""
+    "description": "<p>Dadlab is a small entertainment app using webrtc and socket.io based on the famous game <em>Daddy jokes</em>.</p><p>Players join a private game room with their webcams and microphones enabled and can start playing the game. Each time a player is laughing, a screenshot is taken to immortalize the moment. Players can then share their best moments on social media.</p><p>Technichally talking, the goal of the project was to play with real-time techs such as webrtc and sockets.io. in a React env.</p>"
 }, {
     "id": 4,
     "name": "Airtable Manager",
@@ -48,7 +48,7 @@
     "stackIcons": [ "python.svg", "django.svg", "database.svg" ],
     "illustrations": ["airtable/airtable2.png", "airtable/airtable3.png", "airtable/airtable4.png", "airtable/airtable5.png", "airtable/airtable6.png", "airtable/airtable7.png", "airtable/airtable8.png"],
     "picture": "airtable.png",
-    "description": "<p>Airtable manager is a web-app using the Django Admin system in order to administrate the client's airtable bases from a single page.</p><p>Since the official Airtable API doesn't allow to recover metadata, the system is using a little hack, <em>Mozilla Marionette</em>, in order to parse Airtable API page and to recover metadata by intercepting airtable front requests.</p><p>Then, with the client's API key and previously recovered metadata, the system as a full access to the client's bases from the admin page and can automate data creation/duplication/update/deletion through backend jobs parameterized by the user (zapier's like).</p>"
+    "description": "<p>Airtable manager is a web-app using the Django Admin system in order to administrate the client's airtable bases from a single page.</><p>Since the official Airtable API doesn't allow to recover metadata, the system is using a little hack, <em>Mozilla Marionette</em>, in order to parse Airtable API page and to recover metadata by intercepting airtable front requests.</p><p>Then, with the client's API key and previously recovered metadata, the system as a full access to the client's bases from the admin page and can automate data creation/duplication/update/deletion through backend jobs parameterized by the user (zapier's like).</p>"
 }, {
     "id": 5,
     "name": "eXe",
