@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { LinkA, LinkP } from './LinkText';
+import LinkText from './LinkText';
 import device from '../../styles/device';
 import colors from '../../styles/colors';
 import { Link } from "react-router-dom";
@@ -32,13 +32,13 @@ const Navbar = () => {
         <Nav>
             {pathName.includes('project') 
             ?
-                <LinkSimple to="/"><LinkP>{'< BACK'}</LinkP></LinkSimple>
+                <LinkSimple to="/"><LinkText>{'< BACK'}</LinkText></LinkSimple>
             :
                 <>
-                    <LinkA href="#home">HOME</LinkA>
-                    <LinkA href="#about">ABOUT</LinkA>
-                    <LinkA href="#portfolio">PORTFOLIO</LinkA>
-                    <LinkA href="#contact">CONTACT</LinkA>
+                    <LinkText href="#home">HOME</LinkText>
+                    <LinkText href="#about">ABOUT</LinkText>
+                    <LinkText href="#portfolio">PORTFOLIO</LinkText>
+                    <LinkText href="#contact">CONTACT</LinkText>
                 </>
             }
         </Nav>

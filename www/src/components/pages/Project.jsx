@@ -6,7 +6,7 @@ import Burger from '../sub-compo/Burger';
 import Navbar from '../sub-compo/Navbar';
 import styled from 'styled-components';
 import Title from '../sub-compo/Title';
-import { LinkA } from '../sub-compo/LinkText';
+import LinkText from '../sub-compo/LinkText';
 import Carousel from '../sub-compo/Carousel';
 import Grid from '@material-ui/core/Grid';
 import device from '../../styles/device';
@@ -20,7 +20,7 @@ const Container = styled(Section)`
     }
 `
 
-const Git = styled(LinkA)`
+const Git = styled(LinkText)`
     color: ${colors.turkoise};
     margin: 0;
 `
