@@ -8,19 +8,16 @@ import device from '../../styles/device';
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const Container = styled.div`
-  .MuiPaper-root {
-    background: ${colors.white}; 
-  }
 `
 
 const Picture = styled.img`
   display: block;
   width: 100%;
-  margin: 0;
 
   @media ${device.laptop} {
     min-height: calc(100vh - 250px);
     width: 100%;
+    margin-top: 2.5%;
   }
 `
 
