@@ -3,8 +3,6 @@ import Hero from '../sections/Hero';
 import About from '../sections/About';
 import Portfolio from '../sections/Portfolio';
 import Contact from '../sections/Contact';
-import Burger from '../sub-compo/Burger';
-import Navbar from '../sub-compo/Navbar';
 
 const Home = () => {
     return (
