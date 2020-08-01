@@ -28,7 +28,7 @@ const Navbar = () => {
     const pathName = window.location.pathname;
     return (
         <Nav>
-            {pathName.includes('project') 
+            {pathName.includes('project') || pathName.includes('admin')
             ?
                 <LinkSimple to="/"><LinkText>{'< HOME'}</LinkText></LinkSimple>
             :

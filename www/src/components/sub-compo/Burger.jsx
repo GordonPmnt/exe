@@ -62,7 +62,7 @@ const Burger = () => {
   return (
     <Container ref={node}>
       <Nav>
-        {pathName.includes('project') 
+        {pathName.includes('project') || pathName.includes('admin') 
         ?
           <LinkSimple to="/"><LinkText>{'< HOME'}</LinkText></LinkSimple>
         :
