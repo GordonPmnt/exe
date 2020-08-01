@@ -81,7 +81,7 @@ const Break = styled.div`
 const Swipe = styled.div`
     cursor: pointer;
     text-align: center;
-    padding: 40px;
+    padding-bottom: 60px;
     transition: all 0.5s;
     color: ${colors.turkoise};
 
