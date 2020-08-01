@@ -6,7 +6,6 @@ import Title from '../sub-compo/Title';
 import Skill from '../sub-compo/Skill';
 import LinkText from '../sub-compo/LinkText';
 import device from '../../styles/device';
-import ButtonPink from '../sub-compo/ButtonPink';
 
 const Skills = styled.div`
     display: flex;
@@ -72,56 +71,19 @@ const Contact = styled(LinkText)`
     color: ${colors.turkoise};
 `
 
-const SubTitle = styled.h4`
-    font-size: 1rem;
-    text-align: center;
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-
-    @media ${device.laptop} {
-        font-size: 1.5rem;
-    }
-`
-
-const Show = styled(ButtonPink)`
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: ${({ switched }) => switched ? colors.pinkMexican : colors.turkoise};
-
-    @media ${device.laptop} {
-        font-size: 1.5rem;
-    }
-
-    &:focus {
-        background-color: ${({ switched }) => switched ? colors.pinkMexican : colors.turkoise};
-    }
-`
-
 const Break = styled.div`
     margin: 10px;
 `
 
 const About = () => {
     const skills = require('../../data/skills.json')
-    const [switched, setSwitched] = useState(false);
 
     return (
         <Section id="about" background={colors.white}>
             <Title title={"ABOUT"} />
-            <SubTitle>
-                ⤜ Technical skills
-                <Show onClick={() => setSwitched(!switched)} switched={switched}>
-                    {switched ? "⇤ describe skills" : "show skills ⇥"}
-                </Show> 
-                ⤛
-            </SubTitle>
             <Skills>
             {
-                skills.map(skill => <Skill key={skill.id} {...skill} switched={switched} />)
+                skills.map(skill => <Skill key={skill.id} {...skill} />)
             }
             </Skills>
             <Me>

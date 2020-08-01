@@ -45,6 +45,7 @@ const Name = styled.p`
     font-size: 1rem;
     font-weight: bold;
     margin: 5;
+    min-height: 60px;
 
     @media ${device.laptop} {
         font-size: 1.3rem;
@@ -54,6 +55,7 @@ const Name = styled.p`
 const Description = styled.p`
     font-size: 0.8rem;
     margin: 0;
+    min-height: 110px;
 
     @media ${device.laptop} {
         font-size: 1rem;
@@ -63,9 +65,10 @@ const Description = styled.p`
 const List = styled.ul`
     padding: 0;
     margin: 0;
+    min-height: 180px;
 `
 
-const Skill = ({ name, icon, description, subSkills, svg, switched }) => {
+const Skill = ({ name, icon, description, subSkills, svg }) => {
     const displayedIcon = require(`../../ressources/SVG/${icon}`)
 
     return (
@@ -74,20 +77,16 @@ const Skill = ({ name, icon, description, subSkills, svg, switched }) => {
                 <Icon src={displayedIcon} alt={name}/>
             </IconContainer>
             <Name>{name}</Name>
-            {switched
-                ?   
-                    <List>
-                        {subSkills.map((subSkill, index) => 
-                            <SubSkill 
-                                subSkill={subSkill}
-                                index={index}
-                                svg={svg} 
-                            />
-                        )}
-                    </List>
-                :   
-                    <Description>{description}</Description>
-            }
+                <Description>{description}</Description>
+                <List>
+                    {subSkills.map((subSkill, index) => 
+                        <SubSkill 
+                            subSkill={subSkill}
+                            index={index}
+                            svg={svg} 
+                        />
+                    )}
+                </List>   
         </Container>
     )
 }
